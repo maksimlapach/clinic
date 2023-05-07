@@ -1,0 +1,57 @@
+@import "libs/bootstrap-reboot.min";
+@import "libs/fonts";
+
+@import "base/mixins";
+@import "base/variables";
+
+* {
+    font-family: "Gilroy";
+    scroll-behavior: smooth;
+    color: #474551;
+}
+
+h1, h2 {
+    margin-bottom: 0;
+}
+
+.container {
+    width: 1290px;
+    margin: 0 auto;
+}
+
+.clinicName {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 94px;
+    &__logo {
+        img {
+            width: 95px;
+            height: 94px;
+        }
+    }
+    &__name {
+        margin-left: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $colorText_2;
+    }
+}
+
+.messengers {
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+    height: 28px;
+    img {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@import "blocks/title";
+
+@import "blocks/header";
+@import "blocks/promo";

@@ -1,0 +1,69 @@
+.header {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 300px 190px 160px 460px;
+        grid-template-rows: 160px;
+        column-gap: 60px;
+        align-items: center;
+    }
+    &__address, &__timeWork {
+        display: flex;
+        flex-wrap: wrap;
+        &_img {
+            margin-right: 8px;
+            width: 20px;
+            height: 22px;
+        }
+        &_title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: $colorText_2;
+        }
+        &_descr {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &__timeWork {
+        &_img {
+            width: 22px;
+        }
+        &_descr {
+            font-weight: 400;
+        }
+    }
+    &__contacts {
+        height: 75px;
+        display: grid;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 60px;
+        grid-template-columns: 65px 178px;
+        grid-template-rows: minmax(56px 17px);
+        &_phone {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.025em;
+            text-align: justify;
+            a {
+                color: #474551;
+            }
+        }
+        &_text {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: right;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 2px;
+            a {
+                color: $colorText_2;
+            }
+        }
+    }
+}
