@@ -1,7 +1,8 @@
 .promo {
     min-height: 800px;
     padding-top: 92px;
-    background: url("../img/promo_bg.jpg") no-repeat 50%;
+    background: url("../img/promo_bg.jpg") no-repeat 50% 0%;
+    background-size: 1920px 700px;
     &__title {
         width: 926px;
     }
@@ -50,6 +51,7 @@
         column-gap: 31px;
         &_descr {
            padding-top: 20px;
+           padding-bottom: 36px;
         }
         &_img {
             display: flex;
