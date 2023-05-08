@@ -1,0 +1,34 @@
+.promotions {
+    padding-top: 90px;
+    &__descr {
+        width: 1066px;
+        margin: 30px auto 0 auto;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: center;
+        color: $colorText_2;
+        span {
+            font-weight: 700;
+            color: $colorText_1;
+        }
+    }
+    .tns-item {
+        img {
+            width: 410px;
+            height: 410px;
+        }
+    }
+    .slider {
+        &__controls {
+            &_prevBtn {
+                top: 185px;
+                left: -50px;
+            }
+            &_nextBtn {
+                top: 185px;
+                right: -50px;
+            }
+        }
+    }
+}

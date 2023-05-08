@@ -1,0 +1,37 @@
+.slider {
+    position: relative;
+    margin-top: 29px;
+    &__controls {
+        &_prevBtn, &_nextBtn {
+            position: absolute;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.05));
+        }
+    }
+    &__nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 33px;
+        &_dot {
+            box-sizing: content-box;
+            width: 18px;
+            height: 18px;
+            background: #BDF8F9;
+            border-radius: 100%;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+    }
+}
+.tns-nav-active {
+    box-sizing: content-box;
+    width: 24px;
+    height: 24px;
+    background: #33D9DA;
+    border-radius: 100%;
+    margin-right: 20px;
+}

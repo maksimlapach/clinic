@@ -35,6 +35,7 @@
     "not dead"
   ],
   "dependencies": {
-    "imask": "^6.6.1"
+    "imask": "^6.6.1",
+    "tiny-slider": "^2.9.4"
   }
 }
