@@ -8,6 +8,7 @@
         margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(3, 410px);
+        grid-template-rows: minmax(422px, auto);
         column-gap: 30px;
     }
     &__item {
