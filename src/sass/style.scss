@@ -39,19 +39,9 @@ h1, h2 {
     }
 }
 
-.messengers {
-    display: flex;
-    justify-content: space-between;
-    width: 65px;
-    height: 28px;
-    img {
-        cursor: pointer;
-        width: 28px;
-        height: 28px;
-    }
-}
-
 @import "blocks/title";
+@import "blocks/buttons";
+@import "blocks/contacts";
 @import "blocks/slider";
 
 @import "blocks/header";
@@ -59,3 +49,4 @@ h1, h2 {
 @import "blocks/freeConsult";
 @import "blocks/promotions";
 @import "blocks/service";
+@import "blocks/hygiene";

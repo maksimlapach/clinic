@@ -30,15 +30,12 @@
             text-align: center;
         }
     }
-    &__btn {
+    .signUpBtn {
         display: block;
         margin: 40px auto 0 auto;
         width: 404px;
         height: 60px;
         background: $colorBtn;
-        border: none;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
-        border-radius: 30px;
 
         font-weight: 600;
         font-size: 24px;

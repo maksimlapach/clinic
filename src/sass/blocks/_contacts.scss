@@ -1,0 +1,23 @@
+.contacts {
+    display: grid;
+    grid-template-columns: 65px 214px;
+    column-gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.messengers {
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+    height: 28px;
+    img {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+    }
+}

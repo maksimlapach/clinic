@@ -17,7 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 function countDots(slideSelector, indicatorsSelector, selectorDot) {
   const countSlides = document.querySelectorAll(slideSelector),
     indicators = document.querySelector(indicatorsSelector);
-  console.log(countSlides.length);
   for (let i = 0; i < countSlides.length; i++) {
     const dot = document.createElement('li');
     dot.classList.add(selectorDot);
