@@ -1,5 +1,4 @@
 .promo {
-    min-height: 800px;
     padding-top: 92px;
     background: url("../img/promo_bg.jpg") no-repeat 50% 0%;
     background-size: 1920px 700px;
@@ -22,12 +21,9 @@
         }
     }
     .signUpBtn {
-        background: $colorBtn;
-        border: none;
         font-weight: 600;
         font-size: 18px;
         line-height: 22px;
-        color: #FFFFFF;
         margin-top: 60px;
     }
     &__wrapper {

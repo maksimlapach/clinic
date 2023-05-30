@@ -35,6 +35,15 @@ const sliders = () => {
     'navContainer': ".promotions .slider__nav",
     "navAsThumbnails": true
   });
+  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    "container": '.doctors .slider__wrapper',
+    "items": 1,
+    "swipeAngle": false,
+    "speed": 400,
+    "controlsContainer": ".doctors .slider__controls",
+    'navContainer': ".doctors .slider__nav",
+    "navAsThumbnails": true
+  });
 };
 /* harmony default export */ __webpack_exports__["default"] = (sliders);
 

@@ -8,6 +8,7 @@
     font-family: "Gilroy";
     scroll-behavior: smooth;
     color: #474551;
+    transition: 0.5s all;
 }
 
 h1, h2 {
@@ -50,3 +51,5 @@ h1, h2 {
 @import "blocks/promotions";
 @import "blocks/service";
 @import "blocks/hygiene";
+@import "blocks/doctors";
+@import "blocks/helper";

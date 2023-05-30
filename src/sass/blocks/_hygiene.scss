@@ -1,6 +1,5 @@
 .hygiene {
     padding-top: 30px;
-    min-height: 1500px;
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2, 630px);
@@ -27,11 +26,9 @@
     }
     .priceBtn {
         margin-top: 30px;
-        background: #FFFFFF;
         font-weight: 600;
         font-size: 20px;
         line-height: 25px;
-        color: $colorText_2;
     }
     &__list {
         font-weight: 500;
@@ -127,13 +124,7 @@
             line-height: 25px;
         }
         .signUpBtn {
-            background: rgba(255, 255, 255, 0.8);
-            color: $colorText_2;
             margin-right: 30px;
-        }
-        .chooseDoctorBtn {
-            background: $colorBtn;
-            color: #FFFFFF;
         }
     }
 }
