@@ -21,31 +21,11 @@
                 right: -50px;
             }
         }
-        &__nav {
-            justify-content: center;
-            align-items: center;
-            margin-top: 33px;
-            &_dot {
-                width: 18px;
-                height: 18px;
-                background: #BDF8F9;
-                border-radius: 100%;
-                margin-right: 20px;
-                cursor: pointer;
-            }
-        }
         .tns-item {
             img {
                 width: 410px;
                 height: 410px;
             }
-        }
-        .tns-nav-active {
-            background: $colorText_3;
-            width: 24px;
-            height: 24px;
-            margin-right: 20px;
-            border-radius: 100%;
         }
     }
 }

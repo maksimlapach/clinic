@@ -1,0 +1,65 @@
+.reviews {
+    padding-top: 100px;
+    min-height: 650px;
+    &__descr {
+        text-align: center;
+        margin: 30px auto 0 auto;
+        width: 1066px;
+    }
+    .slider {
+        &__slide {
+            display: grid;
+            grid-template-columns: 160px 378px;
+            column-gap: 31px;
+            justify-content: center;
+            width: 630px;
+            height: 300px;
+            background: $colorBg_2;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+        }
+        &__photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 100%;
+            }
+        }
+        &__descr {
+            position: relative;
+            &_title {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                margin-top: 41px;
+            }
+            &_text {
+                margin-top: 20px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            &_date {
+                position: absolute;
+                bottom: 20px;
+                right: 0px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        &__controls {
+            &_prevBtn {
+                top: 125px;
+                left: -20px;
+            }
+            &_nextBtn {
+                top: 125px;
+                right: -20px;
+            }
+        }
+    }
+}

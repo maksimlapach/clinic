@@ -15,7 +15,6 @@ const sliders = () => {
     tns({
         "container": '.promotions .slider__wrapper',
         "items": 3,
-        "swipeAngle": false,
         "speed": 400,
         "gutter": 30,
         "navPosition": "bottom",
@@ -26,10 +25,29 @@ const sliders = () => {
     tns({
         "container": '.doctors .slider__wrapper',
         "items": 1,
-        "swipeAngle": false,
         "speed": 400,
         "controlsContainer": ".doctors .slider__controls",
         'navContainer': ".doctors .slider__nav",
+        "navAsThumbnails": true
+    });
+    tns({
+        "container": '.reviews .slider__wrapper',
+        "items": 2,
+        "speed": 400,
+        "gutter": 30,
+        "navPosition": "top",
+        "controlsContainer": ".reviews .slider__controls",
+        'navContainer': ".reviews .slider__nav",
+        "navAsThumbnails": true
+    });
+    tns({
+        "container": '.licenses .slider__wrapper',
+        "items": 4,
+        "speed": 400,
+        "gutter": 30,
+        "navPosition": "top",
+        "controlsContainer": ".licenses .slider__controls",
+        'navContainer': ".licenses .slider__nav",
         "navAsThumbnails": true
     });
 };

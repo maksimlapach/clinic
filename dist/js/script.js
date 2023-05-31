@@ -27,7 +27,6 @@ const sliders = () => {
   (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     "container": '.promotions .slider__wrapper',
     "items": 3,
-    "swipeAngle": false,
     "speed": 400,
     "gutter": 30,
     "navPosition": "bottom",
@@ -38,10 +37,29 @@ const sliders = () => {
   (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     "container": '.doctors .slider__wrapper',
     "items": 1,
-    "swipeAngle": false,
     "speed": 400,
     "controlsContainer": ".doctors .slider__controls",
     'navContainer': ".doctors .slider__nav",
+    "navAsThumbnails": true
+  });
+  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    "container": '.reviews .slider__wrapper',
+    "items": 2,
+    "speed": 400,
+    "gutter": 30,
+    "navPosition": "top",
+    "controlsContainer": ".reviews .slider__controls",
+    'navContainer': ".reviews .slider__nav",
+    "navAsThumbnails": true
+  });
+  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    "container": '.licenses .slider__wrapper',
+    "items": 4,
+    "speed": 400,
+    "gutter": 30,
+    "navPosition": "top",
+    "controlsContainer": ".licenses .slider__controls",
+    'navContainer': ".licenses .slider__nav",
     "navAsThumbnails": true
   });
 };
@@ -3966,7 +3984,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__wrapper div', '.promotions .slider__nav', 'slider__nav_dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav_dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
 });
 }();
