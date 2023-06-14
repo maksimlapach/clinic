@@ -50,6 +50,16 @@ const sliders = () => {
         'navContainer': ".licenses .slider__nav",
         "navAsThumbnails": true
     });
+    tns({
+        "container": '.aboutClinic .slider__wrapper',
+        "items": 4,
+        "speed": 400,
+        "gutter": 30,
+        "navPosition": "top",
+        "controlsContainer": ".aboutClinic .slider__controls",
+        'navContainer': ".aboutClinic .slider__nav",
+        "navAsThumbnails": true
+    });
 };
 
 export default sliders;

@@ -1,0 +1,73 @@
+.aboutClinic {
+    min-height: 1022px;
+    padding-top: 90px;
+    &__subtitle {
+        width: 1066px;
+        margin: 30px auto 0 auto;
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 631px 630px;
+        column-gap: 29px;
+    }
+    &__descr {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 140%;
+    }
+    &__list {
+        margin-top: 40px;
+        margin-bottom: 0;
+        list-style-type: none;
+        padding-inline-start: 80px;
+        &_item {
+            position: relative;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+            margin-bottom: 40px;
+            &:nth-child(3) {
+                margin-bottom: 30px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                left: -80px;
+                display: block;
+                width: 70px;
+                height: 70px;
+                background: url('../icons/aboutClinic/verify.png') no-repeat 50%/cover;
+            }
+        }
+    }
+    &__img {
+        width: 630px;
+        height: 400px;
+        img {
+            width: 630px;
+            height: 400px;
+        }
+    }
+    .slider {
+        &__slide {
+            img {
+                width: 300px;
+                height: 200px;
+            }
+        }
+        &__controls {
+            &_prevBtn {
+                top: 77px;
+                left: -20px;
+            }
+            &_nextBtn {
+                top: 77px;
+                right: -20px;
+            }
+        }
+    }
+}

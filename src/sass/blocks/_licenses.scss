@@ -1,7 +1,7 @@
 .licenses {
     padding-top: 84px;
     min-height: 735px;
-    &__descr {
+    &__subtitle {
         margin: 30px auto 0 auto;
         width: 1066px;
         text-align: center;
@@ -17,7 +17,7 @@
                 right: -5px;
             }
         }
-        .tns-item {
+        &__slide {
             img {
                 width: 300px;
                 height: 400px;

@@ -2,6 +2,29 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/showSlideToWindow.js":
+/*!*********************************************!*\
+  !*** ./src/js/modules/showSlideToWindow.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function showSlideToWindow(sliderWrapper, slideWindow, activeSlide) {
+  const slider = document.querySelector(sliderWrapper),
+    window = document.querySelector(slideWindow),
+    slideActive = document.querySelector(activeSlide);
+  window.src = slideActive.src;
+  slider.addEventListener('click', e => {
+    if (e.target.tagName === 'IMG') {
+      window.src = e.target.src;
+      window.alt = e.target.alt;
+    }
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (showSlideToWindow);
+
+/***/ }),
+
 /***/ "./src/js/modules/sliders.js":
 /*!***********************************!*\
   !*** ./src/js/modules/sliders.js ***!
@@ -60,6 +83,16 @@ const sliders = () => {
     "navPosition": "top",
     "controlsContainer": ".licenses .slider__controls",
     'navContainer': ".licenses .slider__nav",
+    "navAsThumbnails": true
+  });
+  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    "container": '.aboutClinic .slider__wrapper',
+    "items": 4,
+    "speed": 400,
+    "gutter": 30,
+    "navPosition": "top",
+    "controlsContainer": ".aboutClinic .slider__controls",
+    'navContainer': ".aboutClinic .slider__nav",
     "navAsThumbnails": true
   });
 };
@@ -3981,13 +4014,17 @@ var __webpack_exports__ = {};
   \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
+/* harmony import */ var _modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showSlideToWindow */ "./src/js/modules/showSlideToWindow.js");
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
 });
 }();
 /******/ })()
