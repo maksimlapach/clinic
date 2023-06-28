@@ -1,6 +1,7 @@
 import sliders from "./modules/sliders";
 import { countDots } from "./modules/sliders";
 import showSlideToWindow from "./modules/showSlideToWindow";
+import modalEntry from "./modules/modals";
 
 document.addEventListener("DOMContentLoaded", () => {
     countDots('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav_dot');
@@ -9,4 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
     countDots('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
     sliders();
     showSlideToWindow('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+    modalEntry('.signUpBtn', ".modalEntry", ".modalEntry__close");
 });

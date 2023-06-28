@@ -20,29 +20,20 @@ h1, h2 {
     margin: 0 auto;
 }
 
-.clinicName {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    height: 94px;
-    &__logo {
-        img {
-            width: 95px;
-            height: 94px;
-        }
-    }
-    &__name {
-        margin-left: 15px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: $colorText_2;
-    }
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 
 @import "blocks/title";
+@import "blocks/form";
+@import "blocks/modals";
 @import "blocks/buttons";
-@import "blocks/contacts";
+@import "blocks/messengers";
+@import "blocks/mainLogo";
 @import "blocks/slider";
 
 @import "blocks/header";
@@ -56,3 +47,6 @@ h1, h2 {
 @import "blocks/reviews";
 @import "blocks/licenses";
 @import "blocks/aboutClinic";
+@import "blocks/primaryConsult";
+@import "blocks/contacts";
+@import "blocks/footer";

@@ -40,6 +40,9 @@
                     width: 165px;
                     height: 115px;
                 }
+                &:hover {
+                    background: $colorBg_1;
+                }
             }
             &_name {
                 width: 391px;
@@ -123,14 +126,6 @@
                 width: 474px;
                 height: 620px;
             }
-            &_btn {
-                position: absolute;
-                top: 720px;
-                right: 209px;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 25px;
-            }
         }
         .tns-nav-active {
             box-sizing: border-box;
@@ -144,5 +139,13 @@
             width: 630px;
             margin-left: 650px;
         }
+    }
+    .signUpBtn {
+        position: absolute;
+        top: 720px;
+        right: 209px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
     }
 }

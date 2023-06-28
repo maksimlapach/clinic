@@ -42,7 +42,6 @@
         justify-content: flex-end;
         column-gap: 60px;
         grid-template-columns: 65px 178px;
-        grid-template-rows: minmax(56px 17px);
         &_phone {
             font-weight: 600;
             font-size: 20px;
@@ -51,18 +50,6 @@
             text-align: end;
             a {
                 color: #474551;
-            }
-        }
-        &_text {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            text-align: right;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 17px;
-            margin-top: 2px;
-            a {
-                color: $colorText_2;
             }
         }
     }

@@ -2,6 +2,50 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/modals.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/modals.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function showModal(modalSelector) {
+  modalSelector.classList.remove('hide');
+  modalSelector.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function hideModal(modalSelector) {
+  modalSelector.classList.remove('show');
+  modalSelector.classList.add('hide');
+  document.body.style.overflow = 'visible';
+}
+function modalEntry(signUpBtnSelector, modalSelector, modalCloseSelector) {
+  const signUpBtn = document.querySelectorAll(signUpBtnSelector),
+    modal = document.querySelector(modalSelector),
+    modalClose = document.querySelector(modalCloseSelector);
+  signUpBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      showModal(modal);
+    });
+  });
+  modalClose.addEventListener('click', () => {
+    hideModal(modal);
+  });
+  modal.addEventListener('click', e => {
+    if (e.target == modal) {
+      hideModal(modal);
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key == 'Escape') {
+      hideModal(modal);
+    }
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (modalEntry);
+
+/***/ }),
+
 /***/ "./src/js/modules/showSlideToWindow.js":
 /*!*********************************************!*\
   !*** ./src/js/modules/showSlideToWindow.js ***!
@@ -4015,6 +4059,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
 /* harmony import */ var _modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showSlideToWindow */ "./src/js/modules/showSlideToWindow.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+
 
 
 
@@ -4025,6 +4071,7 @@ document.addEventListener("DOMContentLoaded", () => {
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.signUpBtn', ".modalEntry", ".modalEntry__close");
 });
 }();
 /******/ })()

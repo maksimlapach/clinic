@@ -1,0 +1,33 @@
+.primaryConsult {
+    margin-top: 93px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    background: url("../img/recordFree_bg.jpg") no-repeat center;
+    background-size: 1920px 500px;
+    &__wrapper {
+        width: 520px;
+        height: 448px;
+        border-radius: 20px;
+        background: $colorBg_2;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+        margin-left: 774px;
+        padding: 30px 55px 25px 55px;
+        text-align: center;
+    }
+    &__title {
+        font-size: 28px;    
+        font-weight: 700;
+        line-height: 34px;
+        color: $colorText_1;
+    }
+    &__descr {
+        margin-top: 14px;
+        font-size: 24px;    
+        font-weight: 500;
+        color: $colorText_2;
+        line-height: 29px;
+    }
+    .entryForm {
+        margin-top: 30px;
+    }
+}

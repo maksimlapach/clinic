@@ -1,0 +1,22 @@
+.entryForm {
+    input {
+        width: 300px;
+        height: 40px;
+        border-radius: 30px;
+        border: 2px solid $colorBg_1;
+        background: #fff;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        &::placeholder {
+            color: $colorBg_1;
+        }
+        &:nth-child(2) {
+            margin-top: 20px;
+        }
+    }
+    button {
+        width: 300px;
+        height: 40px;
+        margin-top: 20px;
+    }
+}

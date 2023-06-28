@@ -1,0 +1,25 @@
+.footer {
+    height: 143px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        width: 757px;
+        list-style-type: none;
+        justify-content: space-between;
+        padding-inline-start: 0px;
+        margin-bottom: 0px;
+        &_item {
+            font-size: 18px;    
+            font-weight: 500;
+            a {
+                color: $colorText_2;
+            }
+        }
+    }
+}
