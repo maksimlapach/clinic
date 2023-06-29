@@ -24,15 +24,15 @@ gulp.task('watch', function() {
     gulp.watch("src/icons/**/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
     gulp.watch("src/js/**/*.js").on('change', gulp.parallel("build-js"));
-    // gulp.watch("src/db/**/*").on('all', gulp.parallel('db'));
+    gulp.watch("src/db/**/*").on('all', gulp.parallel('db'));
 });
 
 
-// gulp.task('db', function () {
-//   return gulp.src("src/db/**/*")
-//       .pipe(gulp.dest("dist/db"));
-//       // .pipe(browserSync.stream());
-// });
+gulp.task('db', function () {
+  return gulp.src("src/db/**/*")
+      .pipe(gulp.dest("dist/db"));
+      // .pipe(browserSync.stream());
+});
 
 
 gulp.task('html', function () {
@@ -130,4 +130,4 @@ gulp.task("build-prod-js", () => {
                 .pipe(gulp.dest("./dist/js/"));
 });
 
-gulp.task('default', gulp.parallel("build-js", 'watch', 'server', 'styles', 'fonts', 'icons', 'html', 'images'));
+gulp.task('default', gulp.parallel("build-js", 'watch', 'server', 'styles', 'fonts', 'icons', 'html', 'images', 'db'));

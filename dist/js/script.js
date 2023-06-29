@@ -19,11 +19,11 @@ function hideModal(modalSelector) {
   modalSelector.classList.add('hide');
   document.body.style.overflow = 'visible';
 }
-function modalEntry(signUpBtnSelector, modalSelector, modalCloseSelector) {
-  const signUpBtn = document.querySelectorAll(signUpBtnSelector),
+function modals(showModalBtnSelector, modalSelector, modalCloseSelector) {
+  const showModalBtn = document.querySelectorAll(showModalBtnSelector),
     modal = document.querySelector(modalSelector),
     modalClose = document.querySelector(modalCloseSelector);
-  signUpBtn.forEach(item => {
+  showModalBtn.forEach(item => {
     item.addEventListener('click', () => {
       showModal(modal);
     });
@@ -42,7 +42,7 @@ function modalEntry(signUpBtnSelector, modalSelector, modalCloseSelector) {
     }
   });
 }
-/* harmony default export */ __webpack_exports__["default"] = (modalEntry);
+/* harmony default export */ __webpack_exports__["default"] = (modals);
 
 /***/ }),
 
@@ -4071,7 +4071,8 @@ document.addEventListener("DOMContentLoaded", () => {
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
-  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.signUpBtn', ".modalEntry", ".modalEntry__close");
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.signUpBtn', ".modalSignUp", ".modalSignUp__close");
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.priceBtn', ".modalPrice", ".modalPrice__close");
 });
 }();
 /******/ })()

@@ -10,12 +10,12 @@ function hideModal(modalSelector) {
     document.body.style.overflow = 'visible';
 }
 
-function modalEntry(signUpBtnSelector, modalSelector, modalCloseSelector) {
-    const signUpBtn = document.querySelectorAll(signUpBtnSelector),
+function modals(showModalBtnSelector, modalSelector, modalCloseSelector) {
+    const showModalBtn = document.querySelectorAll(showModalBtnSelector),
           modal = document.querySelector(modalSelector),
           modalClose = document.querySelector(modalCloseSelector);
 
-    signUpBtn.forEach(item => {
+    showModalBtn.forEach(item => {
         item.addEventListener('click', () => {
             showModal(modal);
         })
@@ -38,4 +38,4 @@ function modalEntry(signUpBtnSelector, modalSelector, modalCloseSelector) {
     });
 }
 
-export default modalEntry;
+export default modals;

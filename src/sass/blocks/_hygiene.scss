@@ -17,6 +17,7 @@
         }
     }
     .priceBtn {
+        width: 190px;
         margin-top: 30px;
         font-weight: 600;
         font-size: 20px;
@@ -111,12 +112,20 @@
         margin-top: 28px;
         text-align: center;
         .signUpBtn, .chooseDoctorBtn {
+            width: 190px;
             font-weight: 600;
             font-size: 20px;
             line-height: 25px;
         }
         .signUpBtn {
             margin-right: 30px;
+        }
+        .chooseDoctorBtn {
+            display: inline-block;
+            padding-top: 9px;
+            color: #FFF;
+            text-decoration: none;
+            cursor: pointer;
         }
     }
 }
