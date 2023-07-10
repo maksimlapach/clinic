@@ -2,6 +2,314 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/cards.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/cards.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/services */ "./src/js/services/services.js");
+
+function cards() {
+  class ServiceItem {
+    constructor(src, alt, title, descr, listItems, parent) {
+      this.src = src;
+      this.alt = alt;
+      this.title = title;
+      this.descr = descr;
+      this.listItems = listItems;
+      this.parent = document.querySelector(parent);
+    }
+    render() {
+      const list = document.createElement('ul');
+      list.classList.add("service__item_list");
+      this.listItems.forEach(item => {
+        list.append(`<li>${item}</li>`);
+      });
+      const content = document.createElement('div');
+      content.classList.add("service__item");
+      content.innerHTML = `<img class="service__item_img" src=${this.src} alt=${this.alt}>
+            <div class="service__item_title title title_fz28">
+                ${this.title}
+            </div>
+            <div class="service__item_descr">
+                ${this.descr}
+            </div>
+            <ul class="service__item_list">` + list.textContent + `</ul>
+            <div class="messengers">
+                <div class="messengersIcons">
+                    <img src="icons/telegram.svg" alt="telegram">
+                    <img src="icons/whatsApp.svg" alt="whatsApp">
+                </div>
+                <div>спросить в мессенджере</div>
+            </div>`;
+      this.parent.append(content);
+    }
+  }
+  (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('http://localhost:3000/services').then(data => {
+    data.forEach(item => {
+      new ServiceItem(item.src, item.alt, item.title, item.descr, item.listItems, '.service .service__wrapper').render();
+    });
+  }).catch(() => {
+    const parent = document.querySelector('.service .service__wrapper');
+    parent.innerHTML = `<div class="service__item">
+        <img class="service__item_img" src="img/service/surgery.png" alt="surgery">
+        <div class="service__item_title title title_fz28">
+            Хирургия
+        </div>
+        <div class="service__item_descr">
+            Удаление зуба является одной из самых распространенных операций в стоматологической практике.
+        </div>
+        <ul class="service__item_list">
+            <li>Удаление зубов любой сложности</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>
+
+
+    <div class="service__item">
+        <img class="service__item_img" src="img/service/therapy.png" alt="therapy">
+        <div class="service__item_title title title_fz28">
+            Терапия
+        </div>
+        <div class="service__item_descr">
+            Лечение напрямую зависит от стадии заболевания. Мы подбираем наиболее эффективные методы диагностики и терапии.
+        </div>
+        <ul class="service__item_list">
+            <li>Кариозных и некариозных поражений</li>
+            <li>Пульпитов и периодонтитов</li>
+            <li>Художественная реставрация зубов</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>
+
+    <div class="service__item">
+        <img class="service__item_img" src="img/service/orthopedics.png" alt="orthopedics">
+        <div class="service__item_title title title_fz28">
+            Ортопедия
+        </div>
+        <div class="service__item_descr">
+            Помогает решить проблемы, связанные с аномалиями, приобретенными дефектами, повреждениями и деформациями органов жевательно-речевого аппарата.
+        </div>
+        <ul class="service__item_list">
+            <li>Коронки и мосты керамические</li>
+            <li>Коронки и мосты циркониевые</li>
+            <li>Съёмное протезирование (протезы, бюгеля, мягкие протезы)</li>
+            <li>Установка виниров</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>
+
+    <div class="service__item">
+        <img class="service__item_img" src="img/service/implantation.png" alt="implantation">
+        <div class="service__item_title title title_fz28">
+            Имплантация
+        </div>
+        <div class="service__item_descr">
+            Это операция по установке в челюстную ткань специального стоматологического штифта, который будет играть роль корня.
+        </div>
+        <ul class="service__item_list">
+            <li>Установка имплантов OSSTEM implant</li>
+            <li>Наращивание кости (все виды аугментации) OSSTEM implant</li>
+            <li>Имплантация зубов по системе All ON4-All ON6</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>
+
+
+    <div class="service__item">
+        <img class="service__item_img" src="img/service/orthodontics.png" alt="orthodontics">
+        <div class="service__item_title title title_fz28">
+            Ортодонтия
+        </div>
+        <div class="service__item_descr">
+            Поможет сделать вашу улыбку красивой и исправит прикус. Исправляет аномалии челюстей, положения челюстей в черепе, формы, величины, соотношения зубных дуг.
+        </div>
+        <ul class="service__item_list">
+            <li>Установка брекет систем</li>
+            <li>Цифровое ортодонтическое лечение прозрачными каппами</li>
+            <li>Полная диагностика и лечение взрослых и детей</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>
+
+
+    <div class="service__item">
+        <img class="service__item_img" src="img/service/whitening.png" alt="whitening">
+        <div class="service__item_title title title_fz28">
+            Отбеливание зубов
+        </div>
+        <div class="service__item_descr">
+            Стоматологическая процедура изменения оттенка зубной эмали. Отбеливание зубов относится к области косметической стоматологии.
+        </div>
+        <ul class="service__item_list">
+            <li>Система Opalescence Boost</li>
+        </ul>
+        <div class="messengers">
+            <div class="messengersIcons">
+                <img src="icons/telegram.svg" alt="telegram">
+                <img src="icons/whatsApp.svg" alt="whatsApp">
+            </div>
+            <div>спросить в мессенджере</div>
+        </div>
+    </div>`;
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (cards);
+
+/***/ }),
+
+/***/ "./src/js/modules/helper.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/helper.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/services */ "./src/js/services/services.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals */ "./src/js/modules/modals.js");
+
+
+
+function helper() {
+  const helperSpeciality = document.querySelectorAll(".helper__item"),
+    modal = document.querySelector(".modalHelper"),
+    modalClose = document.querySelector(".modalHelper__close"),
+    modalBtns = document.querySelectorAll(".modalHelper__btns a"),
+    modalWrapper = document.querySelector(".modalHelper__wrapper"),
+    modalTitle = document.querySelector(".modalHelper__title");
+  class HelperItem {
+    constructor(name, speciality, direction, experience, certificates, orientation, src, alt, parent, titleName, titleParent) {
+      this.name = name;
+      this.speciality = speciality;
+      this.direction = direction;
+      this.experience = experience;
+      this.certificates = certificates;
+      this.orientation = orientation;
+      this.src = src;
+      this.alt = alt;
+      this.parent = parent;
+      this.titleName = titleName;
+      this.titleParent = titleParent;
+    }
+    render() {
+      this.titleParent.innerHTML = `<span>Можете выбрать профильного врача, специализирующегося на</span> ${this.titleName}`;
+      const item = document.createElement('div');
+      item.classList.add('modalHelper__item');
+      item.innerHTML = `
+            <div class="modalHelper__item_name">${this.name}</div>
+            <div class="modalHelper__item_speciality">${this.speciality}</div>
+            <div class="modalHelper__item_descr">
+                <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
+                <div class="modalHelper__item_certificates">
+                    <span>Действующие сертификаты:</span> ${this.certificates}
+                </div>
+                <div class="modalHelper__item_orientation">
+                    <span>Направленость:</span> <br> ${this.orientation}
+                </div>
+            </div>
+            <img src=${this.src} alt=${this.alt}>`;
+      this.parent.append(item);
+    }
+  }
+  helperSpeciality.forEach(item => {
+    item.addEventListener('click', e => {
+      const specialityName = e.target.closest(".helper__item").dataset.speciality;
+      (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('http://localhost:3000/doctors').then(data => {
+        data.forEach(item => {
+          if (item.profile.includes(specialityName)) {
+            new HelperItem(item.name, item.speciality, item.direction, item.experience, item.certificates, item.orientation, item.src, item.alt, modalWrapper, specialityName, modalTitle).render();
+          }
+        });
+      }).catch(() => {
+        modalWrapper.innerHTML = `
+                <div class="modalHelper__item">
+                    <div class="modalHelper__item_name">Анисимов Дмитрий Владимирович</div>
+                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
+                    <div class="modalHelper__item_descr">
+                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
+                        <div class="modalHelper__item_certificates">
+                            <span>Действующие сертификаты:</span> стоматология общей практики; стоматология хирургическая
+                        </div>
+                        <div class="modalHelper__item_orientation">
+                            <span>Направленность:</span> <br> имплантация, пародонтология, удаление зубов любой сложности
+                        </div>
+                    </div>
+                    <img src="img/doctors/doctor_2.png" alt="doctor_2">
+                </div>
+
+                <div class="modalHelper__item">
+                    <div class="modalHelper__item_name">Синельщикова Елена Дмитриевна</div>
+                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
+                    <div class="modalHelper__item_descr">
+                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
+                        <div class="modalHelper__item_certificates">
+                            <span>Действующие сертификаты:</span> стоматология общей практики;
+                            стоматология хирургическая
+                        </div>
+                        <div class="modalHelper__item_orientation">
+                            <span>Направленность:</span> <br> терапевтическое лечение, эстетическая реставрация, хирургическое удаление зубов , профессиональная гигиена и отбеливание
+                        </div>
+                    </div>
+                    <img src="img/doctors/doctor_6.png" alt="doctor_6">
+                </div>
+                `;
+      });
+      (0,_modals__WEBPACK_IMPORTED_MODULE_1__.showModal)(modal);
+    });
+  });
+  modalClose.addEventListener('click', () => {
+    (0,_modals__WEBPACK_IMPORTED_MODULE_1__.hideModal)(modal);
+    modalWrapper.innerHTML = "";
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key == 'Escape') {
+      (0,_modals__WEBPACK_IMPORTED_MODULE_1__.hideModal)(modal);
+      modalWrapper.innerHTML = "";
+    }
+  });
+  modalBtns.forEach(item => {
+    item.addEventListener('click', () => {
+      (0,_modals__WEBPACK_IMPORTED_MODULE_1__.hideModal)(modal);
+      modalWrapper.innerHTML = "";
+    });
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (helper);
+
+/***/ }),
+
 /***/ "./src/js/modules/modals.js":
 /*!**********************************!*\
   !*** ./src/js/modules/modals.js ***!
@@ -9,6 +317,10 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "hideModal": function() { return /* binding */ hideModal; },
+/* harmony export */   "showModal": function() { return /* binding */ showModal; }
+/* harmony export */ });
 function showModal(modalSelector) {
   modalSelector.classList.remove('hide');
   modalSelector.classList.add('show');
@@ -43,6 +355,8 @@ function modals(showModalBtnSelector, modalSelector, modalCloseSelector) {
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (modals);
+
+
 
 /***/ }),
 
@@ -141,6 +455,28 @@ const sliders = () => {
   });
 };
 /* harmony default export */ __webpack_exports__["default"] = (sliders);
+
+
+/***/ }),
+
+/***/ "./src/js/services/services.js":
+/*!*************************************!*\
+  !*** ./src/js/services/services.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getData": function() { return /* binding */ getData; }
+/* harmony export */ });
+const getData = async url => {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`Could not fetch ${url}, status ${res.status}`);
+  }
+  return await res.json(); // json(); - декодирует ответ в формате JSON
+};
+
 
 
 /***/ }),
@@ -4058,21 +4394,27 @@ var __webpack_exports__ = {};
   \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
-/* harmony import */ var _modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showSlideToWindow */ "./src/js/modules/showSlideToWindow.js");
-/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+/* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cards */ "./src/js/modules/cards.js");
+/* harmony import */ var _modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showSlideToWindow */ "./src/js/modules/showSlideToWindow.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+/* harmony import */ var _modules_helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/helper */ "./src/js/modules/helper.js");
+
+
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  (0,_modules_cards__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_1__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
-  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.signUpBtn', ".modalSignUp", ".modalSignUp__close");
-  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_2__["default"])('.priceBtn', ".modalPrice", ".modalPrice__close");
+  (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_2__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.signUpBtn', ".modalSignUp", ".modalSignUp__close");
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.priceBtn', ".modalPrice", ".modalPrice__close");
+  (0,_modules_helper__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 }();
 /******/ })()

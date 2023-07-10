@@ -37,21 +37,9 @@
             line-height: 31px;
             padding-left: 30px;
             margin-bottom: 0px;
-            margin-top: 16px;
+            margin-top: 35px;
             width: 391px;
             min-height: 191px;
-        }
-        &_btns {
-            width: 408px;
-            margin: 33px auto 0 auto;
-            display: flex;
-            justify-content: space-between;
-            .signUpBtn, .priceBtn {
-                width: 190px;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 26px;
-            }
         }
         &_img {
             position: absolute;
@@ -60,6 +48,9 @@
             width: 253px;
             height: 385px;
         }
+    }
+    .messengers {
+        margin-top: 35px;
     }
 }
 

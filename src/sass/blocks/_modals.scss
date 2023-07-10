@@ -79,6 +79,128 @@
     }
 }
 
+.modalHelper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    &__content {
+        position: absolute;
+        width: 1920px;
+        padding: 90px 315px 200px 315px;
+        background: $colorBg_2;
+    }
+    &__close {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 42px;
+        height: 42px;
+        background: url("../icons/close_icon.svg") no-repeat center;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        width: 1180px;
+        line-height: 45px;
+        span {
+            color: $colorText_2;
+        }
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-top: 60px;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 630px);
+        column-gap: 30px;
+        row-gap: 60px;
+        
+    }
+    &__item {
+        position: relative;
+        width: 630px;
+        height: 690px;
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+        padding-top: 40px;
+        padding-left: 16px;
+        cursor: pointer;
+        &_name {
+            font-size: 28px;
+            font-weight: 500;
+            margin-left: 14px;
+            line-height: 33px;
+        }
+        &_speciality {
+            color: $colorText_2;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 31px;
+            margin-left: 14px;
+            margin-top: 11px;
+        }
+        &_descr {
+            position: absolute;
+            top: 351px;
+            width: 320px;
+            height: 326px;
+            border-radius: 20px;
+            background: rgba(243, 254, 254, 0.80);
+            backdrop-filter: blur(6px);
+            padding: 16px 10px 12px 14px;
+            z-index: 10;
+        }
+        &_experience {
+            color: $colorText_2;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+        }
+        &_certificates, &_orientation {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            span {
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+        img {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 474px;
+            height: 620px;
+            z-index: 1;
+        }
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        &_main, &_otherService {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 39px;
+            text-decoration: none;
+            color: #474551;
+            &:hover {
+                color: #474551;
+            }
+        }
+    }
+}
+
 // .modal {
 //     position: fixed;
 //     top: 0px;

@@ -39,3 +39,5 @@ function modals(showModalBtnSelector, modalSelector, modalCloseSelector) {
 }
 
 export default modals;
+export {showModal};
+export {hideModal};
