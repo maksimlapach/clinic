@@ -17,11 +17,6 @@
         padding: 30px 65px 36px 65px;
         text-align: center;
     }
-    &__descr {
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 29px;
-    }
     &__close {
         position: absolute;
         top: 10px;
@@ -32,7 +27,16 @@
         cursor: pointer;
     }
     .signUpForm {
-        margin-top: 10px;
+        &__title {
+            font-size: 22px;
+            color: #000;
+            line-height: 24px;
+        }
+        input {
+            &:nth-child(2) {
+                margin-top: 10px;
+            }
+        }
     }
 }
 
@@ -184,11 +188,42 @@
             z-index: 1;
         }
     }
+
+    &__signUp {
+        width: 630px;
+        height: 690px;
+        padding-top: 40px;
+        &_title {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 39px;
+            span {
+                color: $colorText_2;
+            }
+        }
+        .messengers {
+            margin-top: 85px;
+        }
+        .signUpForm {
+            margin-top: 47px;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+            padding: 35px 110px 25px 110px;
+            text-align: center;
+            input {
+                &:nth-child(2) {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
     &__btns {
         display: flex;
         justify-content: space-between;
         margin-top: 60px;
-        &_main, &_otherService {
+        &_main, &_other {
             font-size: 28px;
             font-weight: 400;
             line-height: 39px;

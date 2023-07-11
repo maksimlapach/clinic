@@ -1,4 +1,11 @@
 .signUpForm {
+    &__title {
+        font-size: 24px;    
+        font-weight: 500;
+        color: $colorText_2;
+        line-height: 29px;
+        text-align: center;
+    }
     input {
         width: 300px;
         height: 40px;
@@ -10,7 +17,7 @@
         &::placeholder {
             color: $colorBg_1;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
             margin-top: 20px;
         }
     }

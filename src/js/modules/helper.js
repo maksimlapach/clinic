@@ -6,12 +6,15 @@ function helper() {
     const helperSpeciality = document.querySelectorAll(".helper__item"),
           modal = document.querySelector(".modalHelper"),
           modalClose = document.querySelector(".modalHelper__close"),
-          modalBtns = document.querySelectorAll(".modalHelper__btns a"),
           modalWrapper = document.querySelector(".modalHelper__wrapper"),
-          modalTitle = document.querySelector(".modalHelper__title");
+          modalTitle = document.querySelector(".modalHelper__title"),
+          modalSubtitle = document.querySelector(".modalHelper__subtitle"),
+          modalBtnsWrapper = document.querySelector(".modalHelper__btns"),
+          modalBtns = document.querySelectorAll(".modalHelper__btns a");
 
     class HelperItem {
-        constructor(name, speciality, direction, experience, certificates, orientation, src, alt, parent, titleName, titleParent) {
+        constructor(id, name, speciality, direction, experience, certificates, orientation, src, alt, parent, titleName, titleParent, subtitleParent, btnsParent) {
+            this.id = id;
             this.name = name;
             this.speciality = speciality;
             this.direction = direction;
@@ -23,13 +26,16 @@ function helper() {
             this.parent = parent;
             this.titleName = titleName;
             this.titleParent = titleParent;
-
+            this.subtitleParent = subtitleParent;
+            this.btnsParent = btnsParent;
         }
 
-        render() {
+        renderCardsDoctors() {
             this.titleParent.innerHTML = `<span>Можете выбрать профильного врача, специализирующегося на</span> ${this.titleName}`;
+            this.subtitleParent.innerHTML = `Выберите врача который вам подходит и кликните на его фото:`;
             const item = document.createElement('div');
             item.classList.add('modalHelper__item');
+            item.id = this.id;
             item.innerHTML = `
             <div class="modalHelper__item_name">${this.name}</div>
             <div class="modalHelper__item_speciality">${this.speciality}</div>
@@ -45,6 +51,50 @@ function helper() {
             <img src=${this.src} alt=${this.alt}>`;
             this.parent.append(item);
         }
+
+        renderInfoDoctor() {
+            modalWrapper.innerHTML = '';
+            this.titleParent.innerHTML = `Вы выбрали <span>${this.name}</span>. Поздравляем, это отличный специалист, настоящий профессионал своего дела`;
+            this.subtitleParent.innerHTML = '';
+            const item = document.createElement('div');
+            item.classList.add('modalHelper__item');
+            item.id = this.id;
+            item.innerHTML = `
+                <div class="modalHelper__item_name">${this.name}</div>
+                <div class="modalHelper__item_speciality">${this.speciality}</div>
+                <div class="modalHelper__item_descr">
+                    <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
+                    <div class="modalHelper__item_certificates">
+                        <span>Действующие сертификаты:</span> ${this.certificates}
+                    </div>
+                    <div class="modalHelper__item_orientation">
+                        <span>Направленость:</span> <br> ${this.orientation}
+                    </div>
+                </div>
+                <img src=${this.src} alt=${this.alt}>`;
+            this.parent.append(item);
+
+            const signUp = document.createElement('div');
+            signUp.classList.add('modalHelper__signUp');
+            signUp.innerHTML = `
+                <div class="modalHelper__signUp_title">Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br>
+                <span>${this.name}</span></div>
+                <div class="messengers">
+                    <div class="messengersIcons">
+                        <img src="icons/telegram.svg" alt="telegram">
+                        <img src="icons/whatsApp.svg" alt="whatsApp">
+                    </div>
+                    <div class="messengers__text">спросить в мессенджере</div>
+                </div>
+                <form action="#" class="signUpForm">
+                    <div class="signUpForm__title">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
+                    <input class="signUpForm__name" placeholder="Имя" type="text">
+                    <input class="signUpForm__phone" placeholder="Телефон" type="phone">
+                    <button class="signUpForm__btn btn btn_color">Записаться</button>
+                </form>
+            `;
+            this.parent.append(signUp);
+        }
     }
 
     helperSpeciality.forEach(item => {
@@ -56,6 +106,7 @@ function helper() {
                 data.forEach(item => {
                     if(item.profile.includes(specialityName)) {
                         new HelperItem(
+                            item.id,
                             item.name,
                             item.speciality,
                             item.direction,
@@ -66,12 +117,44 @@ function helper() {
                             item.alt,
                             modalWrapper,
                             specialityName,
-                            modalTitle
-                        ).render();
+                            modalTitle,
+                            modalSubtitle,
+                            modalBtnsWrapper
+                        ).renderCardsDoctors();
                     }
-                });
-                
-            }).catch(() => {
+                }); 
+                return data;   
+            })
+            .then((data) => {
+                const modalItem = document.querySelectorAll(".modalHelper__item");
+
+                modalItem.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const doctorId = e.target.closest(".modalHelper__item").id;
+                        data.forEach(item => {
+                            if(item.id == doctorId) {
+                                new HelperItem(
+                                    item.id,
+                                    item.name,
+                                    item.speciality,
+                                    item.direction,
+                                    item.experience,
+                                    item.certificates,
+                                    item.orientation,
+                                    item.src,
+                                    item.alt,
+                                    modalWrapper,
+                                    specialityName,
+                                    modalTitle,
+                                    modalSubtitle,
+                                    modalBtnsWrapper
+                                ).renderInfoDoctor();
+                            }
+                        })
+                    })
+                })
+            })
+            .catch(() => {
                 modalWrapper.innerHTML = `
                 <div class="modalHelper__item">
                     <div class="modalHelper__item_name">Анисимов Дмитрий Владимирович</div>
