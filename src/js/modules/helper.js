@@ -1,6 +1,7 @@
 import { getData } from "../services/services";
 import { showModal } from "./modals";
 import { hideModal } from "./modals";
+import forms from "./forms";
 
 function helper() {
     const helperSpeciality = document.querySelectorAll(".helper__item"),
@@ -88,8 +89,8 @@ function helper() {
                 </div>
                 <form action="#" class="signUpForm">
                     <div class="signUpForm__title">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
-                    <input class="signUpForm__name" placeholder="Имя" type="text">
-                    <input class="signUpForm__phone" placeholder="Телефон" type="phone">
+                    <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
+                    <input class="signUpForm__phone" placeholder="Телефон" type="phone" name="phone" required>
                     <button class="signUpForm__btn btn btn_color">Записаться</button>
                 </form>
             `;
@@ -151,6 +152,7 @@ function helper() {
                                 ).renderInfoDoctor();
                             }
                         })
+                        forms(".modalHelper .signUpForm", ".modalHelper", ".modalResult", ".modalResult__content", ".modalHelper__wrapper");
                     })
                 })
             })

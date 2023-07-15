@@ -676,8 +676,8 @@
                 </div>
                 <form action="#" class="signUpForm">
                     <div class="signUpForm__title">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
-                    <input class="signUpForm__name" placeholder="Имя" type="text">
-                    <input class="signUpForm__phone" placeholder="Телефон" type="phone">
+                    <input class="signUpForm__name" placeholder="Имя" name="name" type="text" required>
+                    <input class="signUpForm__phone" placeholder="Телефон" name="phone" type="text" required>
                     <button class="signUpForm__btn btn btn_color">Записаться</button>
                 </form>
             </div>
@@ -751,21 +751,21 @@
         </div>
     </footer>
 
-    <div id="signUpModalId" class="modalSignUp hide">
+    <div class="modalSignUp hide">
         <div class="modalSignUp__dialog">
             <div class="modalSignUp__content">
                 <div data-close class="modalSignUp__close"></div>
                 <form action="#" class="signUpForm">
                     <div class="signUpForm__title">Напишите ваши контактные данные и наши менеджеры свяжуться с вами в ближайшее время</div>
-                    <input class="signUpForm__name" placeholder="Имя" type="text">
-                    <input class="signUpForm__phone" placeholder="Телефон" type="phone">
+                    <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
+                    <input class="signUpForm__phone" placeholder="Телефон" type="text" name="phone" required>
                     <button class="signUpForm__btn btn btn_color">Записаться</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="priceModalId" class="modalPrice hide">
+    <div class="modalPrice hide">
         <div class="modalPrice__dialog">
             <div class="modalPrice__content">
                 <div data-close class="modalPrice__close"></div>
@@ -785,7 +785,7 @@
         </div>
     </div>
 
-    <div id="helperModalId" class="modalHelper hide">
+    <div class="modalHelper hide">
         <div class="modalHelper__dialog">
             <div class="modalHelper__content">
                 <div data-close class="modalHelper__close"></div>
@@ -801,6 +801,12 @@
         </div>
     </div>
 
+    <div class="modalResult hide">
+        <div class="modalResult__dialog">
+            <div class="modalResult__content">
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

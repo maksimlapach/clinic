@@ -3,6 +3,7 @@ import cards from "./modules/cards";
 import { countDots } from "./modules/sliders";
 import showSlideToWindow from "./modules/showSlideToWindow";
 import modals from "./modules/modals";
+import forms from "./modules/forms";
 import helper from "./modules/helper";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     countDots('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
     sliders();
     showSlideToWindow('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
-    modals('.signUpBtn', ".modalSignUp", ".modalSignUp__close");
-    modals('.priceBtn', ".modalPrice", ".modalPrice__close");
+    modals('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
+    modals('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
+    forms(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
     helper();
 });
