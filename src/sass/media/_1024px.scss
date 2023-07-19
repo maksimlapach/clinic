@@ -1,0 +1,131 @@
+@media(max-width: 1199px) {
+    .container {
+        max-width: 984px;
+    }
+    .logo {
+        width: 238px;
+        min-height: 72px;
+        &__img {
+            width: 73px;
+            height: 72px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+    }
+    .mainTitle {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    .title {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    .subtitle {
+        font-size: 28px;
+        line-height: 39px;
+    }
+    .header {
+        &__desktop {
+            grid-template-columns: 238px 190px 160px 260px;
+            grid-template-rows: minmax(130px, auto);
+            column-gap: 45px;
+        }
+        &__contacts {
+            grid-template-columns: 65px 165px;
+            column-gap: 30px;
+        }
+        &__contacts-phones {
+            font-size: 18px;
+        }
+    }
+    .promo {
+        background-size: 100% 374px;
+        padding-top: 60px;
+        .container {
+            position: relative;
+        }
+        &__item {
+            width: 308px;
+        }
+        &__title {
+            width: 628px;
+        }
+        &__subtitle {
+            width: 501px;
+        }
+        .subtitle {
+            font-size: 24px;
+            line-height: 33px;
+        }
+        &__text {
+            margin-top: 30px;
+        }
+        &__btn {
+            position: absolute;
+            top: 242px;
+            left: 502px;
+            margin-top: 0px;
+        }
+        &__wrapper {
+            margin-top: 20px;
+        }
+        &__item {
+            width: 300px;
+            min-height: 240px;
+            padding: 27px 25px 35px 25px;
+        }
+        &__item-descr {
+            width: 248px;
+        }
+        &__item-title {
+            font-size: 22px;
+            line-height: 31px;
+        }
+        &__item-text {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .freeConsult {
+        padding-top: 90px;
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill, 300px);
+            grid-template-rows: minmax(380px, auto);
+            column-gap: 42px
+        }
+        &__item-img {
+            height: 200px;
+        }
+        &__item-title {
+            font-size: 22px;
+            line-height: 27px;
+            margin-top: 30px;
+        }
+        &__item-descr {
+            margin-top: 30px;
+        }
+        &__btn {
+            margin: 60px auto 0 auto;
+        }
+    }
+    .promotions {
+        min-height: 660px;
+        &__subtitle {
+            width: 983px;
+        }
+        .slider {
+            margin-top: 60px;
+            &__slide-img {
+                width: 300px;
+                height: 300px;
+            }
+            &__controls-prevBtn {
+                top: 130px;
+            }
+            &__controls-nextBtn {
+                top: 130px;
+            }
+        }
+    }
+}

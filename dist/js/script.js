@@ -30,7 +30,7 @@ function cards() {
       const content = document.createElement('div');
       content.classList.add("service__item");
       content.innerHTML = `<img class="service__item_img" src=${this.src} alt=${this.alt}>
-            <div class="service__item_title title title_fz28">
+            <div class="service__item_title subtitle">
                 ${this.title}
             </div>
             <div class="service__item_descr">
@@ -55,7 +55,7 @@ function cards() {
     const parent = document.querySelector('.service .service__wrapper');
     parent.innerHTML = `<div class="service__item">
         <img class="service__item_img" src="img/service/surgery.png" alt="surgery">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Хирургия
         </div>
         <div class="service__item_descr">
@@ -76,7 +76,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/therapy.png" alt="therapy">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Терапия
         </div>
         <div class="service__item_descr">
@@ -98,7 +98,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/orthopedics.png" alt="orthopedics">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Ортопедия
         </div>
         <div class="service__item_descr">
@@ -121,7 +121,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/implantation.png" alt="implantation">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Имплантация
         </div>
         <div class="service__item_descr">
@@ -144,7 +144,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/orthodontics.png" alt="orthodontics">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Ортодонтия
         </div>
         <div class="service__item_descr">
@@ -167,7 +167,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/whitening.png" alt="whitening">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Отбеливание зубов
         </div>
         <div class="service__item_descr">
@@ -454,6 +454,47 @@ function helper() {
 
 /***/ }),
 
+/***/ "./src/js/modules/menu.js":
+/*!********************************!*\
+  !*** ./src/js/modules/menu.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function menu() {
+  const showBtn = document.querySelector(".header__hamburger"),
+    closeBtn = document.querySelector(".header__menu-close"),
+    menu = document.querySelector(".header__menu"),
+    overlay = document.querySelector(".header__menu-overlay");
+  function showMenu() {
+    menu.classList.add("header__menu_active");
+    document.body.style.overflow = 'hidden';
+  }
+  function hideMenu() {
+    menu.classList.remove("header__menu_active");
+    document.body.style.overflow = 'visible';
+  }
+  showBtn.addEventListener('click', () => {
+    showMenu();
+  });
+  closeBtn.addEventListener('click', () => {
+    hideMenu();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key == 'Escape') {
+      hideMenu();
+    }
+  });
+  menu.addEventListener('click', e => {
+    if (e.target == overlay) {
+      hideMenu();
+    }
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (menu);
+
+/***/ }),
+
 /***/ "./src/js/modules/modals.js":
 /*!**********************************!*\
   !*** ./src/js/modules/modals.js ***!
@@ -559,54 +600,102 @@ function countDots(slideSelector, indicatorsSelector, selectorDot) {
   }
 }
 const sliders = () => {
-  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    "container": '.promotions .slider__wrapper',
-    "items": 3,
-    "speed": 400,
-    "gutter": 30,
-    "navPosition": "bottom",
-    "controlsContainer": ".promotions .slider__controls",
-    'navContainer': ".promotions .slider__nav",
-    "navAsThumbnails": true
-  });
-  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    "container": '.doctors .slider__wrapper',
-    "items": 1,
-    "speed": 400,
-    "controlsContainer": ".doctors .slider__controls",
-    'navContainer': ".doctors .slider__nav",
-    "navAsThumbnails": true
-  });
-  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    "container": '.reviews .slider__wrapper',
-    "items": 2,
-    "speed": 400,
-    "gutter": 30,
-    "navPosition": "top",
-    "controlsContainer": ".reviews .slider__controls",
-    'navContainer': ".reviews .slider__nav",
-    "navAsThumbnails": true
-  });
-  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    "container": '.licenses .slider__wrapper',
-    "items": 4,
-    "speed": 400,
-    "gutter": 30,
-    "navPosition": "top",
-    "controlsContainer": ".licenses .slider__controls",
-    'navContainer': ".licenses .slider__nav",
-    "navAsThumbnails": true
-  });
-  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    "container": '.aboutClinic .slider__wrapper',
-    "items": 4,
-    "speed": 400,
-    "gutter": 30,
-    "navPosition": "top",
-    "controlsContainer": ".aboutClinic .slider__controls",
-    'navContainer': ".aboutClinic .slider__nav",
-    "navAsThumbnails": true
-  });
+  const container = document.querySelector(".container");
+  console.log(container.clientWidth);
+  if (container.clientWidth > 984) {
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.promotions .slider__wrapper',
+      "items": 3,
+      "speed": 400,
+      "gutter": 30,
+      "navPosition": "bottom",
+      "controlsContainer": ".promotions .slider__controls",
+      'navContainer': ".promotions .slider__nav",
+      "navAsThumbnails": true
+    });
+    // tns({
+    //     "container": '.doctors .slider__wrapper',
+    //     "items": 1,
+    //     "speed": 400,
+    //     "controlsContainer": ".doctors .slider__controls",
+    //     'navContainer': ".doctors .slider__nav",
+    //     "navAsThumbnails": true
+    // });
+    // tns({
+    //     "container": '.reviews .slider__wrapper',
+    //     "items": 2,
+    //     "speed": 400,
+    //     "gutter": 30,
+    //     "navPosition": "top",
+    //     "controlsContainer": ".reviews .slider__controls",
+    //     'navContainer': ".reviews .slider__nav",
+    //     "navAsThumbnails": true
+    // });
+    // tns({
+    //     "container": '.licenses .slider__wrapper',
+    //     "items": 4,
+    //     "speed": 400,
+    //     "gutter": 30,
+    //     "navPosition": "top",
+    //     "controlsContainer": ".licenses .slider__controls",
+    //     'navContainer': ".licenses .slider__nav",
+    //     "navAsThumbnails": true
+    // });
+    // tns({
+    //     "container": '.aboutClinic .slider__wrapper',
+    //     "items": 4,
+    //     "speed": 400,
+    //     "gutter": 30,
+    //     "navPosition": "top",
+    //     "controlsContainer": ".aboutClinic .slider__controls",
+    //     'navContainer': ".aboutClinic .slider__nav",
+    //     "navAsThumbnails": true
+    // });
+  } else if (container.clientWidth == 984) {
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.promotions .slider__wrapper',
+      "items": 3,
+      "speed": 400,
+      "gutter": 42,
+      "navPosition": "bottom",
+      "controlsContainer": ".promotions .slider__controls",
+      'navContainer': ".promotions .slider__nav",
+      "navAsThumbnails": true
+    });
+  } else if (container.clientWidth == 728) {
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.promotions .slider__wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "bottom",
+      "controlsContainer": ".promotions .slider__controls",
+      'navContainer': ".promotions .slider__nav",
+      "navAsThumbnails": true
+    });
+  } else if (container.clientWidth == 540) {
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.promotions .slider__wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "bottom",
+      "controlsContainer": ".promotions .slider__controls",
+      'navContainer': ".promotions .slider__nav",
+      "navAsThumbnails": true
+    });
+  } else if (container.clientWidth < 540) {
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.promotions .slider__wrapper',
+      "items": 1,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "bottom",
+      "controlsContainer": ".promotions .slider__controls",
+      'navContainer': ".promotions .slider__nav",
+      "navAsThumbnails": true
+    });
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (sliders);
 
@@ -8637,6 +8726,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
 /* harmony import */ var _modules_helper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/helper */ "./src/js/modules/helper.js");
+/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js");
+
 
 
 
@@ -8645,17 +8736,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  (0,_modules_cards__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav_dot');
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
+  // cards();
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav-dot');
+  // countDots('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
+  // countDots('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
+  // countDots('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_2__["default"])('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
-  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
-  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
-  (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
-  (0,_modules_helper__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  // showSlideToWindow('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+  // modals('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
+  // modals('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
+  // forms(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
+  // helper();
+  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_6__["default"])();
 });
 }();
 /******/ })()

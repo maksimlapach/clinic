@@ -1,0 +1,93 @@
+@media(max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .mainTitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 193px;
+        min-height: 110px;
+        &__name {
+            font-size: 18px;
+            line-height: 21px;
+            margin-left: 0px;
+            margin-top: 5px;
+        }
+        &__img {
+            width: 63px;
+            height: 63px;
+        }
+    }
+    .header {
+        &__menu {
+            width: 100%;
+        }
+        &__hamburger {
+            right: 20px;
+        }
+    }
+    .promo {
+        &__title {
+            width: 277px;
+        }
+        .subtitle {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            width: 277px;
+        }
+        &__text {
+            margin-top: 20px;
+            width: 267px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &__btn {
+            margin-top: 30px;
+        }
+        &__item {
+            width: 230px;
+        }
+    }
+    .freeConsult {
+        &__subtitle {
+            margin-top: 20px;
+        }
+        &__wrapper {
+            margin-top: 30px;
+            grid-template-columns: 230px;
+        }
+    }
+    .promotions {
+        min-height: 550px;
+        &__subtitle {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .slider {
+            margin-top: 30px;
+            &__slide-img {
+                width: 280px;
+                height: 280px;
+            }
+            &__nav {
+                margin-top: 20px;
+            }
+        }
+    }
+}

@@ -92,8 +92,8 @@
     overflow: scroll;
     &__content {
         position: absolute;
-        width: 1920px;
-        padding: 90px 315px 200px 315px;
+        width: 100%;
+        padding: 90px 315px 100px 315px;
         background: $colorBg_2;
     }
     &__close {

@@ -7,7 +7,7 @@
 * {
     font-family: "Gilroy";
     scroll-behavior: smooth;
-    color: #474551;
+    color: $colorMain;
     transition: 0.5s all;
 }
 
@@ -16,7 +16,7 @@ h1, h2 {
 }
 
 .container {
-    width: 1290px;
+    max-width: 1290px;
     margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@ h1, h2 {
 @import "blocks/modals";
 @import "blocks/buttons";
 @import "blocks/messengers";
-@import "blocks/mainLogo";
+@import "blocks/logo";
 @import "blocks/slider";
 
 @import "blocks/header";
@@ -50,3 +50,13 @@ h1, h2 {
 @import "blocks/primaryConsult";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+//Media
+@import "media/1800px";
+@import "media/1600px";
+@import "media/1440px";
+@import "media/1200px";
+@import "media/1024px";
+@import "media/768px";
+@import "media/576px";
+@import "media/320px";

@@ -1,24 +1,17 @@
+.mainTitle {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+}
 .title {
-    &_fz58 {
-        font-weight: 700;
-        font-size: 58px;
-        line-height: 70px;
-    }
-    &_fz42 {
-        font-weight: 500;
-        font-size: 42px;
-        line-height: 50px;
-        text-align: center;
-    }
-    &_fz36 {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 45px;
-    }
-    &_fz28 {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 39px;
-        color: $colorText_2;
-    }
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+}
+.subtitle {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 39px;
+    color: $colorText_2;
 }

@@ -1,39 +1,57 @@
 .header {
-    &__wrapper {
+    &__desktop {
         display: grid;
         grid-template-columns: 300px 190px 160px 460px;
-        grid-template-rows: 160px;
+        grid-template-rows: minmax(160px, auto);
         column-gap: 60px;
         align-items: center;
     }
-    &__address, &__timeWork {
+    &__mobile {
+        display: none;
+    }
+    &__address {
         display: flex;
         flex-wrap: wrap;
-        &_img {
-            margin-right: 8px;
-            width: 20px;
-            height: 22px;
-        }
-        &_title {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
-            color: $colorText_2;
-        }
-        &_descr {
-            margin-top: 10px;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17px;
-        }
+    }
+    &__address-img {
+        margin-right: 8px;
+        width: 20px;
+        height: 22px;
+    }
+    &__address-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $colorText_2;
+    }
+    &__address-descr {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
     }
     &__timeWork {
-        &_img {
-            width: 22px;
-        }
-        &_descr {
-            font-weight: 400;
-        }
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__timeWork-img {
+        width: 22px;
+        margin-right: 8px;
+        width: 20px;
+        height: 22px;
+    }
+    &__timeWork-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $colorText_2;
+    }
+    &__timeWork-descr {
+        font-weight: 400;
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
     }
     &__contacts {
         height: 75px;
@@ -42,15 +60,19 @@
         justify-content: flex-end;
         column-gap: 60px;
         grid-template-columns: 65px 178px;
-        &_phone {
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 28px;
-            letter-spacing: 0.025em;
-            text-align: end;
-            a {
-                color: #474551;
-            }
+    }
+    &__contacts-phones {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.025em;
+        text-align: end;
+    }
+    &__contacts-link {
+        &:hover {
+            text-decoration: none;
+            color: $colorText_2;
         }
+        color: $colorMain;
     }
 }

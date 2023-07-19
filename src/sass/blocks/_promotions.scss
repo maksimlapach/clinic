@@ -11,21 +11,18 @@
         }
     }
     .slider {
-        &__controls {
-            &_prevBtn {
-                top: 185px;
-                left: -50px;
-            }
-            &_nextBtn {
-                top: 185px;
-                right: -50px;
-            }
+        margin-top: 29px;
+        &__controls-prevBtn {
+            top: 185px;
+            left: -50px;
         }
-        .tns-item {
-            img {
-                width: 410px;
-                height: 410px;
-            }
+        &__controls-nextBtn {
+            top: 185px;
+            right: -50px;
+        }
+        &__slide-img {
+            width: 410px;
+            height: 410px;
         }
     }
 }

@@ -23,7 +23,7 @@ function cards() {
 
             content.innerHTML = 
             `<img class="service__item_img" src=${this.src} alt=${this.alt}>
-            <div class="service__item_title title title_fz28">
+            <div class="service__item_title subtitle">
                 ${this.title}
             </div>
             <div class="service__item_descr">
@@ -59,7 +59,7 @@ function cards() {
         const parent = document.querySelector('.service .service__wrapper');
         parent.innerHTML = `<div class="service__item">
         <img class="service__item_img" src="img/service/surgery.png" alt="surgery">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Хирургия
         </div>
         <div class="service__item_descr">
@@ -80,7 +80,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/therapy.png" alt="therapy">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Терапия
         </div>
         <div class="service__item_descr">
@@ -102,7 +102,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/orthopedics.png" alt="orthopedics">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Ортопедия
         </div>
         <div class="service__item_descr">
@@ -125,7 +125,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/implantation.png" alt="implantation">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Имплантация
         </div>
         <div class="service__item_descr">
@@ -148,7 +148,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/orthodontics.png" alt="orthodontics">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Ортодонтия
         </div>
         <div class="service__item_descr">
@@ -171,7 +171,7 @@ function cards() {
 
     <div class="service__item">
         <img class="service__item_img" src="img/service/whitening.png" alt="whitening">
-        <div class="service__item_title title title_fz28">
+        <div class="service__item_title subtitle">
             Отбеливание зубов
         </div>
         <div class="service__item_descr">

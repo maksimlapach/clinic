@@ -49,42 +49,88 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__wrapper">
-                <div class="mainLogo">
-                    <div class="mainLogo__logo">
-                        <img src="img/main_logo.svg" alt="logo">
-                    </div>
-                    <div class="mainLogo__name">
+            <div class="header__desktop">
+                <div class="logo">
+                    <img class="logo__img" src="img/main_logo.svg" alt="logo">
+                    <div class="logo__name">
                         Стоматологическая клиника
                     </div>
                 </div>
                 <div class="header__address">
-                    <img class="header__address_img" src="icons/header/mapPin.svg" alt="mapPin">
-                    <div class="header__address_title">
+                    <img class="header__address-img" src="icons/header/mapPin.svg" alt="mapPin">
+                    <div class="header__address-title">
                         Адрес
                     </div>
-                    <div class="header__address_descr">
+                    <div class="header__address-descr">
                         г. Коломна, ул. Октябрьской революции д. 161
                     </div>
                 </div>
                 <div class="header__timeWork">
-                    <img class="header__timeWork_img" src="icons/header/clock.svg" alt="clock">
-                    <div class="header__timeWork_title">
+                    <img class="header__timeWork-img" src="icons/header/clock.svg" alt="clock">
+                    <div class="header__timeWork-title">
                         Время работы
                     </div>
-                    <div class="header__timeWork_descr">
+                    <div class="header__timeWork-descr">
                         Работаем без выходных с 9:00 до 21:00
                     </div>
                 </div>
                 <div class="header__contacts">
                     <div class="messengersIcons">
-                        <img src="icons/telegram.svg" alt="telegram">
-                        <img src="icons/whatsApp.svg" alt="whatsApp">
+                        <img class="messengersIcons__img" src="icons/telegram.svg" alt="telegram">
+                        <img class="messengersIcons__img" src="icons/whatsApp.svg" alt="whatsApp">
                     </div>
-                    <div class="header__contacts_phone">
-                        <a href="tel:+74966141515">+7 (496) 614-15-15</a>
-                        <a href="tel:+79260255767">+7 (926) 025-57-67</a>
+                    <div class="header__contacts-phones">
+                        <a class="header__contacts-link" href="tel:+74966141515">+7 (496) 614-15-15</a>
+                        <a class="header__contacts-link" href="tel:+79260255767">+7 (926) 025-57-67</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="header__mobile">
+                <div class="logo">
+                    <img class="logo__img" src="img/main_logo.svg" alt="logo">
+                    <div class="logo__name">
+                        Стоматологическая клиника
+                    </div>
+                </div>
+                <div class="header__hamburger">
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line header__hamburger-line_short"></span>
+                </div>
+                <div class="header__menu">
+                    <div class="header__menu-block">
+                        <img class="header__menu-close" src="icons/close_icon.svg" alt="closeMenu">
+                        <div class="header__address">
+                            <img class="header__address-img" src="icons/header/mapPin.svg" alt="mapPin">
+                            <div class="header__address-title">
+                                Адрес
+                            </div>
+                            <div class="header__address-descr">
+                                г. Коломна, ул. Октябрьской революции д. 161
+                            </div>
+                        </div>
+                        <div class="header__timeWork">
+                            <img class="header__timeWork-img" src="icons/header/clock.svg" alt="clock">
+                            <div class="header__timeWork-title">
+                                Время работы
+                            </div>
+                            <div class="header__timeWork-descr">
+                                Работаем без выходных с 9:00 до 21:00
+                            </div>
+                        </div>
+                        <div class="header__contacts">
+                            <div class="messengersIcons">
+                                <img class="messengersIcons__img" src="icons/telegram.svg" alt="telegram">
+                                <img class="messengersIcons__img" src="icons/whatsApp.svg" alt="whatsApp">
+                            </div>
+                            <div class="header__contacts-phones">
+                                <a class="header__contacts-link" href="tel:+74966141515">+7 (496) 614-15-15</a>
+                                <a class="header__contacts-link" href="tel:+79260255767">+7 (926) 025-57-67</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__menu-overlay"></div>
                 </div>
             </div>
         </div>
@@ -92,52 +138,46 @@
 
     <div class="promo">
         <div class="container">
-            <h1 class="title title_fz58 promo__title">
+            <h1 class="promo__title mainTitle">
                 Лечение и протезирование зубов по Европейским стандартам
             </h1>
-            <h2 class="title title_fz28 promo__subtitle">
+            <h2 class="promo__subtitle subtitle">
                 Предоставим 2-3 плана качественного лечения под ваш бюджет
             </h2>
             <div class="promo__text">
                 Запишитесь на <span>бесплатную</span> первичную консультацию - диагностику зубов
             </div>
-            <button class="signUpBtn btn btn_color">Записаться</button>
+            <button class="promo__btn btn btn_color signUpBtn">Записаться</button>
             <div class="promo__wrapper">
                 <div class="promo__item">
-                    <div class="promo__item_img">
-                        <img src="icons/promo/calendar.svg" alt="calendar">
-                    </div>
-                    <div class="promo__item_descr">
-                        <div class="promo__item_title">
+                    <img class="promo__item-img" src="icons/promo/calendar.svg" alt="calendar">
+                    <div class="promo__item-descr">
+                        <div class="promo__item-title">
                             Работаем с 2011 года
                         </div>
-                        <div class="promo__item_text">
+                        <div class="promo__item-text">
                             Многолетний опыт работы - залог качественного сервиса
                         </div>
                     </div>
                 </div>
                 <div class="promo__item">
-                    <div class="promo__item_img">
-                        <img src="icons/promo/userGear.svg" alt="user">
-                    </div>
-                    <div class="promo__item_descr">
-                        <div class="promo__item_title">
+                    <img class="promo__item-img" src="icons/promo/userGear.svg" alt="user">
+                    <div class="promo__item-descr">
+                        <div class="promo__item-title">
                             Опытные врачи
                         </div>
-                        <div class="promo__item_text">
+                        <div class="promo__item-text">
                             Огромный опыт персонала и слаженность работы
                         </div>
                     </div>
                 </div>
                 <div class="promo__item">
-                    <div class="promo__item_img">
-                        <img src="icons/promo/fingerprint.svg" alt="fingerprint">
-                    </div>
-                    <div class="promo__item_descr">
-                        <div class="promo__item_title">
+                    <img class="promo__item-img" src="icons/promo/fingerprint.svg" alt="fingerprint">
+                    <div class="promo__item-descr">
+                        <div class="promo__item-title">
                             Уникальный подход
                         </div>
-                        <div class="promo__item_text">
+                        <div class="promo__item-text">
                             Применяем в своей работе современные технологии
                         </div>
                     </div>
@@ -148,79 +188,79 @@
 
     <div class="freeConsult">
         <div class="container">
-            <h2 class="title title_fz42">
+            <h2 class="title">
                 Бесплатная консультация врача
             </h2>
-            <h3 class="freeConsult__subtitle title title_fz28">
+            <h3 class="freeConsult__subtitle subtitle">
                 На бесплатной консультации врач клиники проведет диагностику всех зубов:
             </h3>
             <div class="freeConsult__wrapper">
                 <div class="freeConsult__item">
-                    <img src="img/freeConsult/diagnostics.jpg" alt="diagnostics" class="freeConsult__item_img">
-                    <div class="freeConsult__item_title">
+                    <img class="freeConsult__item-img" src="img/freeConsult/diagnostics.jpg" alt="diagnostics">
+                    <div class="freeConsult__item-title">
                         Полный осмотр и диагностика полости рта
                     </div>
-                    <div class="freeConsult__item_descr">
+                    <div class="freeConsult__item-descr">
                         При необходимости сделаем дополнительный снимок зубов, у нас в клинике
                     </div>
                 </div>
                 <div class="freeConsult__item">
-                    <img src="img/freeConsult/plan.jpg" alt="plan" class="freeConsult__item_img">
-                    <div class="freeConsult__item_title">
+                    <img class="freeConsult__item-img" src="img/freeConsult/plan.jpg" alt="plan">
+                    <div class="freeConsult__item-title">
                         Составит 2-3 плана лечения на выбор
                     </div>
-                    <div class="freeConsult__item_descr">
+                    <div class="freeConsult__item-descr">
                         Вы сможете выбрать подходящий план лечения, исходя из бюджета
                     </div>
                 </div>
                 <div class="freeConsult__item">
-                    <img src="img/freeConsult/cleaning.jpg" alt="cleaning" class="freeConsult__item_img">
-                    <div class="freeConsult__item_title">
+                    <img class="freeConsult__item-img" src="img/freeConsult/cleaning.jpg" alt="cleaning">
+                    <div class="freeConsult__item-title">
                         При необходимости проведем проф. гигиену
                     </div>
-                    <div class="freeConsult__item_descr">
+                    <div class="freeConsult__item-descr">
                         Чистка зубов в 4 этапа
                     </div>
                 </div>
             </div>
-            <button class="signUpBtn btn btn_color">Записаться</button>
+            <button class="freeConsult__btn btn btn_color signUpBtn">Записаться</button>
         </div>
     </div>
 
     <div id="promotions" class="promotions">
         <div class="container">
-            <h2 class="title title_fz42">
+            <h2 class="title">
                 Акции
             </h2>
-            <div class="promotions__subtitle title title_fz28">
+            <div class="promotions__subtitle subtitle">
                 Для подписчиков группы VK стоматологической клиники "Семейный доктор" <span>действуют акции и специальные предложения</span>
             </div>
             <div class="slider"> 
                 <div class="slider__wrapper">
                     <div class="slider__slide">
-                        <img src="img/promotions/pregnant.jpg" alt="pregnant">
+                        <img class="slider__slide-img" src="img/promotions/pregnant.jpg" alt="pregnant">
                     </div>
                     <div class="slider__slide">
-                        <img src="img/promotions/pregnant.jpg" alt="pregnant">
+                        <img class="slider__slide-img" src="img/promotions/pregnant.jpg" alt="pregnant">
                     </div>
                     <div class="slider__slide">
-                        <img src="img/promotions/restoration.jpg" alt="restoration">
+                        <img class="slider__slide-img" src="img/promotions/restoration.jpg" alt="restoration">
                     </div>
                     <div class="slider__slide">
-                        <img src="img/promotions/delete.jpg" alt="delete">
+                        <img class="slider__slide-img" src="img/promotions/delete.jpg" alt="delete">
                     </div>
                     <div class="slider__slide">
-                        <img src="img/promotions/pregnant.jpg" alt="pregnant">
+                        <img class="slider__slide-img" src="img/promotions/pregnant.jpg" alt="pregnant">
                     </div>
                 </div> 
                 <div class="slider__controls">
-                    <div class="slider__controls_prevBtn">
+                    <div class="slider__controls-prevBtn">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="20" cy="20" r="20" transform="rotate(180 20 20)" fill="white"/>
                             <path d="M7.60601 18.9393C7.02022 19.5251 7.02022 20.4749 7.60601 21.0607L17.1519 30.6066C17.7377 31.1924 18.6875 31.1924 19.2733 30.6066C19.8591 30.0208 19.8591 29.0711 19.2733 28.4853L10.788 20L19.2733 11.5147C19.8591 10.9289 19.8591 9.97919 19.2733 9.3934C18.6875 8.80761 17.7377 8.80761 17.1519 9.3934L7.60601 18.9393ZM32 18.5L8.66667 18.5L8.66667 21.5L32 21.5L32 18.5Z" fill="#099DBA"/>
                         </svg>
                     </div>
-                    <div class="slider__controls_nextBtn">
+                    <div class="slider__controls-nextBtn">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="20" cy="20" r="20" fill="white"/>
                             <path d="M32.394 21.0607C32.9798 20.4749 32.9798 19.5251 32.394 18.9393L22.8481 9.3934C22.2623 8.80761 21.3125 8.80761 20.7267 9.3934C20.1409 9.97919 20.1409 10.9289 20.7267 11.5147L29.212 20L20.7267 28.4853C20.1409 29.0711 20.1409 30.0208 20.7267 30.6066C21.3125 31.1924 22.2623 31.1924 22.8481 30.6066L32.394 21.0607ZM8 21.5H31.3333V18.5H8V21.5Z" fill="#099DBA"/>
@@ -232,25 +272,25 @@
         </div>
     </div>
 
-    <div id="service" class="service">
+    <!-- <div id="service" class="service">
         <div class="container">
-            <h2 class="title title_fz42">
+            <h2 class="title">
                 Услуги
             </h2>
-            <div class="service__subtitle title title_fz28">
+            <div class="service__subtitle subtitle">
                 Наша клиника предоставляет широкий спектр услуг, выберите подходящую вам и 
                 <span>запишитесь на бесплатную консультацию</span> 
             </div>
             <div class="service__wrapper">
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="hygiene">
+    <!-- <div class="hygiene">
         <div class="container">
             <div class="hygiene__wrapper">
                 <div class="hygiene__item">
-                    <h2 class="hygiene__title title title_fz28">
+                    <h2 class="hygiene__title subtitle">
                         Технология профессиональной гигиены полости рта <span>в 4 этапа</span> 
                     </h2>
                     <button class="priceBtn btn">Узнать цены</button>
@@ -297,12 +337,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="doctors" class="doctors">
+    <!-- <div id="doctors" class="doctors">
         <div class="container">
-            <h2 class="title title_fz42">Врачи</h2>
-            <div class="doctors__subtitle title title_fz28">В нашей клинике работают высококлассные специалисты с большим опытом работы. Выберите подходящего врача и запишитесь на  консультацию.</div>
+            <h2 class="title">Врачи</h2>
+            <div class="doctors__subtitle subtitle">В нашей клинике работают высококлассные специалисты с большим опытом работы. Выберите подходящего врача и запишитесь на  консультацию.</div>
 
             <div class="slider"> 
                 <div class="slider__wrapper">
@@ -427,11 +467,11 @@
                 <button class="signUpBtn btn">Записаться</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="helper" class="helper">
+    <!-- <div id="helper" class="helper">
         <div class="container">
-            <div class="helper__subtitle title title_fz36">
+            <div class="helper__subtitle">
                 Выбрав, интересующую вас услугу, <span>наш электронный помощник</span>, поможет вам быстро подобрать нужного специалиста
             </div>
             <div class="helper__wrapper">
@@ -473,12 +513,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="reviews" class="reviews">
+    <!-- <div id="reviews" class="reviews">
         <div class="container">
-            <h2 class="title title_fz42">Отзывы</h2>
-            <div class="reviews__subtitle title title_fz28">Нашу клинику за годы работы посетили сотни пациентов. Всегда рады видеть довольных клиентов. Ваша улыбка - это наша работа!</div>
+            <h2 class="title">Отзывы</h2>
+            <div class="reviews__subtitle subtitle">Нашу клинику за годы работы посетили сотни пациентов. Всегда рады видеть довольных клиентов. Ваша улыбка - это наша работа!</div>
             <div class="slider"> 
                 <div class="slider__wrapper">
                     <div>
@@ -559,12 +599,12 @@
                 <ul class="slider__nav"></ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="licenses" class="licenses">
+    <!-- <div id="licenses" class="licenses">
         <div class="container">
-            <h2 class="title title_fz42">Лицензии и награды</h2>
-            <div class="licenses__subtitle title title_fz28">Деятельность клиники сертифицирована, мы имеем все необходимые лицензии и разрешающие документы.</div>
+            <h2 class="title">Лицензии и награды</h2>
+            <div class="licenses__subtitle subtitle">Деятельность клиники сертифицирована, мы имеем все необходимые лицензии и разрешающие документы.</div>
             <div class="slider"> 
                 <div class="slider__wrapper">
                     <div class="slider__slide">
@@ -600,12 +640,12 @@
                 <ul class="slider__nav"></ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="aboutClinic" class="aboutClinic">
+    <!-- <div id="aboutClinic" class="aboutClinic">
         <div class="container">
-            <h2 class="title title_fz42">О клинике</h2>
-            <div class="aboutClinic__subtitle title title_fz28">Вы получите качественное лечение на современном оборудовании по приемлимым ценам</div>
+            <h2 class="title">О клинике</h2>
+            <div class="aboutClinic__subtitle subtitle">Вы получите качественное лечение на современном оборудовании по приемлимым ценам</div>
             <div class="aboutClinic__wrapper">
                 <div>
                     <div class="aboutClinic__descr">Философия клиники Ваша здоровая улыбка – наша работа.  В стенах нашей стоматологической клиники Вы всегда можете рассчитывать на профессиональное оказание услуг в кратчайшие сроки.</div>
@@ -666,9 +706,9 @@
                 <ul class="slider__nav"></ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="primaryConsult">
+    <!-- <div class="primaryConsult">
         <div class="container">
             <div class="primaryConsult__wrapper">
                 <div class="primaryConsult__title">
@@ -682,13 +722,13 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="contacts" class="contacts">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2282.3209609702308!2d38.74162497671345!3d55.107653541497335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a7084bc1418d3%3A0x46d79d16266ab0d4!2z0YPQuy4g0J7QutGC0Y_QsdGA0YzRgdC60L7QuSDQoNC10LLQvtC70Y7RhtC40LgsIDE2MSwg0JrQvtC70L7QvNC90LAsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGB0LjRjywgMTQwNDEy!5e0!3m2!1sru!2sua!4v1687609396895!5m2!1sru!2sua" width="1920" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- <div id="contacts" class="contacts">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2282.3209609702308!2d38.74162497671345!3d55.107653541497335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a7084bc1418d3%3A0x46d79d16266ab0d4!2z0YPQuy4g0J7QutGC0Y_QsdGA0YzRgdC60L7QuSDQoNC10LLQvtC70Y7RhtC40LgsIDE2MSwg0JrQvtC70L7QvNC90LAsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGB0LjRjywgMTQwNDEy!5e0!3m2!1sru!2sua!4v1687609396895!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="container">
             <div class="contacts__wrapper">
-                <div class="contacts__title title title_fz42">Контакты</div>
+                <div class="contacts__title title">Контакты</div>
                 <div class="contacts__address">г. Коломна, ул. Октябрьской революции д. 161</div>
                 <div class="contacts__timeWork">
                     <span>с 9:00 до 21:00</span> <br>
@@ -708,16 +748,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="mainLogo">
-                    <div class="mainLogo__logo">
+                <div class="logo">
+                    <div class="logo__logo">
                         <img src="img/main_logo.svg" alt="logo">
                     </div>
-                    <div class="mainLogo__name">
+                    <div class="logo__name">
                         Стоматологическая клиника
                     </div>
                 </div>
@@ -749,9 +789,9 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
-    <div class="modalSignUp hide">
+    <!-- <div class="modalSignUp hide">
         <div class="modalSignUp__dialog">
             <div class="modalSignUp__content">
                 <div data-close class="modalSignUp__close"></div>
@@ -763,13 +803,13 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modalPrice hide">
+    <!-- <div class="modalPrice hide">
         <div class="modalPrice__dialog">
             <div class="modalPrice__content">
                 <div data-close class="modalPrice__close"></div>
-                <div class="modalPrice__descr title_fz28">
+                <div class="modalPrice__descr subtitle">
                     Скачайте прайс-лист и ознакомьтесь с ценами
                 </div>
                 <img src="icons/png_icon.png" alt="png" class="modalPrice__icon">
@@ -783,8 +823,8 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> -->
+<!-- 
     <div class="modalHelper hide">
         <div class="modalHelper__dialog">
             <div class="modalHelper__content">
@@ -799,14 +839,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modalResult hide">
+    <!-- <div class="modalResult hide">
         <div class="modalResult__dialog">
             <div class="modalResult__content">
             </div>
         </div>
-    </div>
+    </div> -->
+
+
     <script src="js/script.js"></script>
 </body>
 </html>
