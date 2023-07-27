@@ -2,11 +2,20 @@
     .container {
         max-width: 1140px;
     }
+
+    .doctorCard {
+        width: 555px;
+        &__speciality {
+            font-size: 21px;
+        }
+    }
+
     .header {
         &__desktop {
             grid-template-columns: 300px 190px 160px 310px;
         }
     }
+
     .promo {
         &__item {
             width: 360px;
@@ -22,6 +31,7 @@
             margin-top: 20px;
         }
     }
+
     .freeConsult {
         &__wrapper {
             grid-template-columns: repeat(auto-fill, 360px);
@@ -31,21 +41,130 @@
             height: 220px;
         }
     }
+
     .promotions {
         min-height: 700px;
-        .slider {
-            &__controls-prevBtn {
-                top: 160px;
-                left: -20px;
+        &__control-prevBtn {
+            top: 160px;
+            left: -20px;
+        }
+        &__control-nextBtn {
+            top: 160px;
+            right: -20px;
+        }
+        &__slide-img {
+            width: 360px;
+            height: 360px;
+        }
+    }
+
+    .service {
+        &__wrapper {
+            grid-template-columns: repeat(2, 555px);
+        }
+    }
+
+    .hygiene {
+        &__wrapper {
+            grid-template-columns: repeat(2, 555px);
+        }
+        &__block {
+            margin: 0 auto;
+            &:nth-child(2) {
+                margin: 0 auto;
             }
-            &__controls-nextBtn {
-                top: 160px;
-                right: -20px;
+            &:nth-child(3) {
+                margin: 0 auto;
             }
-            &__slide-img {
-                width: 360px;
-                height: 360px;
+            &:nth-child(4) {
+                margin: 0 auto;
             }
+        }
+    }
+
+    .doctors {
+        &__control-prevBtn {
+            right: 535px;
+        }
+        &__nav-item {
+            width: 555px;
+        }
+        &__nav-name {
+            font-size: 21px;
+        }
+        &__nav-speciality {
+            font-size: 18px;
+            span {
+                font-size: 16px;
+            }
+        }
+        .tns-ovh {
+            width: 555px;
+            margin-left: 585px;
+        }
+    }
+
+    .helper {
+        &__wrapper {
+            margin: 0 auto;
+            width: 690px;
+            column-gap: 60px;
+            row-gap: 60px;
+            margin-top: 60px;
+        }
+    }
+    .modalHelper {
+        &__content {
+            width: 1140px;
+        }
+        &__wrapper {
+            grid-template-columns: repeat(2, 555px);
+        }
+        &__signUp {
+            width: 555px;
+        }
+        &__signUp-form {
+            margin-top: 22px;
+        }
+    }
+
+    .reviews {
+        min-height: 660px;
+        &__slide {
+            grid-template-columns: 160px 304px;
+            width: 555px;
+            min-height: 325px;
+        }
+        &__descr-date {
+            bottom: 12px;
+        }
+    }
+
+    .licenses {
+        min-height: 700px;
+        &__slide-img {
+            width: 262px;
+            height: 362px;
+        }
+        &__control-prevBtn {
+            top: 161px;
+        }
+        &__control-nextBtn {
+            top: 161px;
+        } 
+    }
+
+    .aboutClinic {
+        &__wrapper {
+            grid-template-columns: repeat(2, 555px);
+        }
+        &__img {
+            width: 555px;
+            height: 400px;
+        }
+        &__slide-img {
+            width: 262px;
+            height: 200px;
         }
     }
 }

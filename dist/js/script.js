@@ -29,20 +29,20 @@ function cards() {
       });
       const content = document.createElement('div');
       content.classList.add("service__item");
-      content.innerHTML = `<img class="service__item_img" src=${this.src} alt=${this.alt}>
-            <div class="service__item_title subtitle">
+      content.innerHTML = `<img class="service__item-img" src=${this.src} alt=${this.alt}>
+            <div class="service__item-title">
                 ${this.title}
             </div>
-            <div class="service__item_descr">
+            <div class="service__item-descr">
                 ${this.descr}
             </div>
-            <ul class="service__item_list">` + list.textContent + `</ul>
-            <div class="messengers">
+            <ul class="service__item-list">` + list.textContent + `</ul>
+            <div class="service__item-messengers messengers">
                 <div class="messengersIcons">
                     <img src="icons/telegram.svg" alt="telegram">
                     <img src="icons/whatsApp.svg" alt="whatsApp">
                 </div>
-                <div>спросить в мессенджере</div>
+                <div class="messengersText">спросить в мессенджере</div>
             </div>`;
       this.parent.append(content);
     }
@@ -54,134 +54,134 @@ function cards() {
   }).catch(() => {
     const parent = document.querySelector('.service .service__wrapper');
     parent.innerHTML = `<div class="service__item">
-        <img class="service__item_img" src="img/service/surgery.png" alt="surgery">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/surgery.png" alt="surgery">
+        <div class="service__item-title">
             Хирургия
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Удаление зуба является одной из самых распространенных операций в стоматологической практике.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Удаление зубов любой сложности</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
-                <img src="icons/telegram.svg" alt="telegram">
-                <img src="icons/whatsApp.svg" alt="whatsApp">
+                <img class="messengersIcons__img" src="icons/telegram.svg" alt="telegram">
+                <img class="messengersIcons__img" src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>
 
 
     <div class="service__item">
-        <img class="service__item_img" src="img/service/therapy.png" alt="therapy">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/therapy.png" alt="therapy">
+        <div class="service__item-title">
             Терапия
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Лечение напрямую зависит от стадии заболевания. Мы подбираем наиболее эффективные методы диагностики и терапии.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Кариозных и некариозных поражений</li>
             <li>Пульпитов и периодонтитов</li>
             <li>Художественная реставрация зубов</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
                 <img src="icons/telegram.svg" alt="telegram">
                 <img src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>
 
     <div class="service__item">
-        <img class="service__item_img" src="img/service/orthopedics.png" alt="orthopedics">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/orthopedics.png" alt="orthopedics">
+        <div class="service__item-title">
             Ортопедия
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Помогает решить проблемы, связанные с аномалиями, приобретенными дефектами, повреждениями и деформациями органов жевательно-речевого аппарата.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Коронки и мосты керамические</li>
             <li>Коронки и мосты циркониевые</li>
             <li>Съёмное протезирование (протезы, бюгеля, мягкие протезы)</li>
             <li>Установка виниров</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
                 <img src="icons/telegram.svg" alt="telegram">
                 <img src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>
 
     <div class="service__item">
-        <img class="service__item_img" src="img/service/implantation.png" alt="implantation">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/implantation.png" alt="implantation">
+        <div class="service__item-title">
             Имплантация
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Это операция по установке в челюстную ткань специального стоматологического штифта, который будет играть роль корня.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Установка имплантов OSSTEM implant</li>
             <li>Наращивание кости (все виды аугментации) OSSTEM implant</li>
             <li>Имплантация зубов по системе All ON4-All ON6</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
                 <img src="icons/telegram.svg" alt="telegram">
                 <img src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>
 
 
     <div class="service__item">
-        <img class="service__item_img" src="img/service/orthodontics.png" alt="orthodontics">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/orthodontics.png" alt="orthodontics">
+        <div class="service__item-title">
             Ортодонтия
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Поможет сделать вашу улыбку красивой и исправит прикус. Исправляет аномалии челюстей, положения челюстей в черепе, формы, величины, соотношения зубных дуг.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Установка брекет систем</li>
             <li>Цифровое ортодонтическое лечение прозрачными каппами</li>
             <li>Полная диагностика и лечение взрослых и детей</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
                 <img src="icons/telegram.svg" alt="telegram">
                 <img src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>
 
 
     <div class="service__item">
-        <img class="service__item_img" src="img/service/whitening.png" alt="whitening">
-        <div class="service__item_title subtitle">
+        <img class="service__item-img" src="img/service/whitening.png" alt="whitening">
+        <div class="service__item-title">
             Отбеливание зубов
         </div>
-        <div class="service__item_descr">
+        <div class="service__item-descr">
             Стоматологическая процедура изменения оттенка зубной эмали. Отбеливание зубов относится к области косметической стоматологии.
         </div>
-        <ul class="service__item_list">
+        <ul class="service__item-list">
             <li>Система Opalescence Boost</li>
         </ul>
-        <div class="messengers">
+        <div class="service__item-messengers messengers">
             <div class="messengersIcons">
                 <img src="icons/telegram.svg" alt="telegram">
                 <img src="icons/whatsApp.svg" alt="whatsApp">
             </div>
-            <div>спросить в мессенджере</div>
+            <div class="messengersText">спросить в мессенджере</div>
         </div>
     </div>`;
   });
@@ -225,8 +225,10 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
   const maskOptions = {
     mask: '+{38}(000)000-00-00'
   };
+  const masks = [];
   phone.forEach(item => {
-    (0,imask__WEBPACK_IMPORTED_MODULE_2__["default"])(item, maskOptions);
+    const mask = (0,imask__WEBPACK_IMPORTED_MODULE_2__["default"])(item, maskOptions);
+    masks.push(mask);
   });
   forms.forEach(item => {
     bindPostData(item);
@@ -240,6 +242,9 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
       if (obj.phone.length < 17) {
         showResultModal(message.wrong, modal, modalResult, contentResultModal, wrapper);
         form.reset();
+        masks.forEach(item => {
+          item.updateValue();
+        });
         throw new Error();
       } else {
         json = JSON.stringify(obj);
@@ -250,6 +255,9 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
         showResultModal(message.error, modal, modalResult, contentResultModal, wrapper);
       }).finally(() => {
         form.reset();
+        masks.forEach(item => {
+          item.updateValue();
+        });
       });
     });
   }
@@ -314,20 +322,21 @@ function helper() {
       this.subtitleParent.innerHTML = `Выберите врача который вам подходит и кликните на его фото:`;
       const item = document.createElement('div');
       item.classList.add('modalHelper__item');
+      item.classList.add('doctorCard');
       item.id = this.id;
       item.innerHTML = `
-            <div class="modalHelper__item_name">${this.name}</div>
-            <div class="modalHelper__item_speciality">${this.speciality}</div>
-            <div class="modalHelper__item_descr">
-                <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
-                <div class="modalHelper__item_certificates">
+            <div class="doctorCard__name">${this.name}</div>
+            <div class="doctorCard__speciality">${this.speciality}</div>
+            <div class="doctorCard__descr">
+                <div class="doctorCard__experience">Опыт работы более ${this.experience} лет</div>
+                <div class="doctorCard__certificates">
                     <span>Действующие сертификаты:</span> ${this.certificates}
                 </div>
-                <div class="modalHelper__item_orientation">
+                <div class="doctorCard__orientation">
                     <span>Направленость:</span> <br> ${this.orientation}
                 </div>
             </div>
-            <img src=${this.src} alt=${this.alt}>`;
+            <img class="doctorCard__img" src=${this.src} alt=${this.alt}>`;
       this.parent.append(item);
     }
     renderInfoDoctor() {
@@ -336,39 +345,42 @@ function helper() {
       this.subtitleParent.innerHTML = '';
       const item = document.createElement('div');
       item.classList.add('modalHelper__item');
+      item.classList.add('doctorCard');
       item.id = this.id;
       item.innerHTML = `
-                <div class="modalHelper__item_name">${this.name}</div>
-                <div class="modalHelper__item_speciality">${this.speciality}</div>
-                <div class="modalHelper__item_descr">
-                    <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
-                    <div class="modalHelper__item_certificates">
+                <div class="doctorCard__name">${this.name}</div>
+                <div class="doctorCard__speciality">${this.speciality}</div>
+                <div class="doctorCard__descr">
+                    <div class="doctorCard__experience">Опыт работы более ${this.experience} лет</div>
+                    <div class="doctorCard__certificates">
                         <span>Действующие сертификаты:</span> ${this.certificates}
                     </div>
-                    <div class="modalHelper__item_orientation">
+                    <div class="doctorCard__orientation">
                         <span>Направленость:</span> <br> ${this.orientation}
                     </div>
                 </div>
-                <img src=${this.src} alt=${this.alt}>`;
+                <img class="doctorCard__img" src=${this.src} alt=${this.alt}>`;
       this.parent.append(item);
       const signUp = document.createElement('div');
       signUp.classList.add('modalHelper__signUp');
       signUp.innerHTML = `
-                <div class="modalHelper__signUp_title">Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br>
+                <div class="modalHelper__signUp-title">Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br>
                 <span>${this.name}</span></div>
-                <div class="messengers">
+                <div class="modalHelper__signUp-messengers messengers">
                     <div class="messengersIcons">
-                        <img src="icons/telegram.svg" alt="telegram">
-                        <img src="icons/whatsApp.svg" alt="whatsApp">
+                        <img class="messengersIcons__img" src="icons/telegram.svg" alt="telegram">
+                        <img class="messengersIcons__img" src="icons/whatsApp.svg" alt="whatsApp">
                     </div>
-                    <div class="messengers__text">спросить в мессенджере</div>
+                    <div>спросить в мессенджере</div>
                 </div>
-                <form action="#" class="signUpForm">
-                    <div class="signUpForm__title">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
-                    <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
-                    <input class="signUpForm__phone" placeholder="Телефон" type="phone" name="phone" required>
-                    <button class="signUpForm__btn btn btn_color">Записаться</button>
-                </form>
+                <div class="modalHelper__signUp-wrapper">
+                    <div class="modalHelper__signUp-subtitle">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
+                    <form action="#" class="modalHelper__signUp-form signUpForm">  
+                        <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
+                        <input class="signUpForm__phone" placeholder="Телефон" type="phone" name="phone" required>
+                        <button class="signUpForm__btn btn btn_color">Записаться</button>
+                    </form>
+                </div>
             `;
       this.parent.append(signUp);
     }
@@ -398,35 +410,35 @@ function helper() {
         });
       }).catch(() => {
         modalWrapper.innerHTML = `
-                <div class="modalHelper__item">
-                    <div class="modalHelper__item_name">Анисимов Дмитрий Владимирович</div>
-                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
-                    <div class="modalHelper__item_descr">
-                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
-                        <div class="modalHelper__item_certificates">
+                <div class="modalHelper__item doctorCard">
+                    <div class="doctorCard__name">Анисимов Дмитрий Владимирович</div>
+                    <div class="doctorCard__speciality">Врач-стоматолог</div>
+                    <div class="doctorCard__descr">
+                        <div class="doctorCard__experience">Опыт работы более 5 лет</div>
+                        <div class="doctorCard__certificates">
                             <span>Действующие сертификаты:</span> стоматология общей практики; стоматология хирургическая
                         </div>
-                        <div class="modalHelper__item_orientation">
+                        <div class="doctorCard__orientation">
                             <span>Направленность:</span> <br> имплантация, пародонтология, удаление зубов любой сложности
                         </div>
                     </div>
-                    <img src="img/doctors/doctor_2.png" alt="doctor_2">
+                    <img class="doctorCard__img" src="img/doctors/doctor_2.png" alt="doctor_2">
                 </div>
 
-                <div class="modalHelper__item">
-                    <div class="modalHelper__item_name">Синельщикова Елена Дмитриевна</div>
-                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
-                    <div class="modalHelper__item_descr">
-                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
-                        <div class="modalHelper__item_certificates">
+                <div class="modalHelper__item doctorCard">
+                    <div class="doctorCard__name">Синельщикова Елена Дмитриевна</div>
+                    <div class="doctorCard__speciality">Врач-стоматолог</div>
+                    <div class="doctorCard__descr">
+                        <div class="doctorCard__experience">Опыт работы более 5 лет</div>
+                        <div class="doctorCard__certificates">
                             <span>Действующие сертификаты:</span> стоматология общей практики;
                             стоматология хирургическая
                         </div>
-                        <div class="modalHelper__item_orientation">
+                        <div class="doctorCard__orientation">
                             <span>Направленность:</span> <br> терапевтическое лечение, эстетическая реставрация, хирургическое удаление зубов , профессиональная гигиена и отбеливание
                         </div>
                     </div>
-                    <img src="img/doctors/doctor_6.png" alt="doctor_6">
+                    <img class="doctorCard__img" src="img/doctors/doctor_6.png" alt="doctor_6">
                 </div>
                 `;
       });
@@ -461,7 +473,11 @@ function helper() {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-function menu() {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "footerMenu": function() { return /* binding */ footerMenu; },
+/* harmony export */   "headerMenu": function() { return /* binding */ headerMenu; }
+/* harmony export */ });
+function headerMenu() {
   const showBtn = document.querySelector(".header__hamburger"),
     closeBtn = document.querySelector(".header__menu-close"),
     menu = document.querySelector(".header__menu"),
@@ -491,7 +507,24 @@ function menu() {
     }
   });
 }
-/* harmony default export */ __webpack_exports__["default"] = (menu);
+function footerMenu() {
+  const showBtn = document.querySelector(".footer__hamburger"),
+    closeBtn = document.querySelector(".footer__menu-close"),
+    menu = document.querySelector(".footer__menu");
+  showBtn.addEventListener('click', () => {
+    menu.classList.add("footer__menu_active");
+  });
+  closeBtn.addEventListener('click', () => {
+    menu.classList.remove("footer__menu_active");
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key == 'Escape') {
+      menu.classList.remove("footer__menu_active");
+    }
+  });
+}
+
+
 
 /***/ }),
 
@@ -604,98 +637,214 @@ const sliders = () => {
   console.log(container.clientWidth);
   if (container.clientWidth > 984) {
     (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-      "container": '.promotions .slider__wrapper',
+      "container": '.promotions__slider-wrapper',
       "items": 3,
       "speed": 400,
       "gutter": 30,
       "navPosition": "bottom",
-      "controlsContainer": ".promotions .slider__controls",
-      'navContainer': ".promotions .slider__nav",
+      "controlsContainer": ".promotions__slider-controls",
+      'navContainer': ".promotions__slider-nav",
       "navAsThumbnails": true
     });
-    // tns({
-    //     "container": '.doctors .slider__wrapper',
-    //     "items": 1,
-    //     "speed": 400,
-    //     "controlsContainer": ".doctors .slider__controls",
-    //     'navContainer': ".doctors .slider__nav",
-    //     "navAsThumbnails": true
-    // });
-    // tns({
-    //     "container": '.reviews .slider__wrapper',
-    //     "items": 2,
-    //     "speed": 400,
-    //     "gutter": 30,
-    //     "navPosition": "top",
-    //     "controlsContainer": ".reviews .slider__controls",
-    //     'navContainer': ".reviews .slider__nav",
-    //     "navAsThumbnails": true
-    // });
-    // tns({
-    //     "container": '.licenses .slider__wrapper',
-    //     "items": 4,
-    //     "speed": 400,
-    //     "gutter": 30,
-    //     "navPosition": "top",
-    //     "controlsContainer": ".licenses .slider__controls",
-    //     'navContainer': ".licenses .slider__nav",
-    //     "navAsThumbnails": true
-    // });
-    // tns({
-    //     "container": '.aboutClinic .slider__wrapper',
-    //     "items": 4,
-    //     "speed": 400,
-    //     "gutter": 30,
-    //     "navPosition": "top",
-    //     "controlsContainer": ".aboutClinic .slider__controls",
-    //     'navContainer': ".aboutClinic .slider__nav",
-    //     "navAsThumbnails": true
-    // });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.reviews__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 30,
+      "navPosition": "top",
+      "controlsContainer": ".reviews__slider-controls",
+      'navContainer': ".reviews__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.licenses__slider-wrapper',
+      "items": 4,
+      "speed": 400,
+      "gutter": 30,
+      "navPosition": "top",
+      "controlsContainer": ".licenses__slider-controls",
+      'navContainer': ".licenses__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.aboutClinic__slider-wrapper',
+      "items": 4,
+      "speed": 400,
+      "gutter": 30,
+      "navPosition": "top",
+      "controlsContainer": ".aboutClinic__slider-controls",
+      'navContainer': ".aboutClinic__slider-nav",
+      "navAsThumbnails": true
+    });
   } else if (container.clientWidth == 984) {
     (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-      "container": '.promotions .slider__wrapper',
+      "container": '.promotions__slider-wrapper',
       "items": 3,
       "speed": 400,
       "gutter": 42,
       "navPosition": "bottom",
-      "controlsContainer": ".promotions .slider__controls",
-      'navContainer': ".promotions .slider__nav",
+      "controlsContainer": ".promotions__slider-controls",
+      'navContainer': ".promotions__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.reviews__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".reviews__slider-controls",
+      'navContainer': ".reviews__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.licenses__slider-wrapper',
+      "items": 4,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".licenses__slider-controls",
+      'navContainer': ".licenses__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.aboutClinic__slider-wrapper',
+      "items": 4,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".aboutClinic__slider-controls",
+      'navContainer': ".aboutClinic__slider-nav",
       "navAsThumbnails": true
     });
   } else if (container.clientWidth == 728) {
     (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-      "container": '.promotions .slider__wrapper',
+      "container": '.promotions__slider-wrapper',
       "items": 2,
       "speed": 400,
       "gutter": 20,
       "navPosition": "bottom",
-      "controlsContainer": ".promotions .slider__controls",
-      'navContainer': ".promotions .slider__nav",
+      "controlsContainer": ".promotions__slider-controls",
+      'navContainer': ".promotions__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.reviews__slider-wrapper',
+      "items": 1,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".reviews__slider-controls",
+      'navContainer': ".reviews__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.licenses__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 30,
+      "navPosition": "top",
+      "controlsContainer": ".licenses__slider-controls",
+      'navContainer': ".licenses__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.aboutClinic__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".aboutClinic__slider-controls",
+      'navContainer': ".aboutClinic__slider-nav",
       "navAsThumbnails": true
     });
   } else if (container.clientWidth == 540) {
     (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-      "container": '.promotions .slider__wrapper',
+      "container": '.promotions__slider-wrapper',
       "items": 2,
       "speed": 400,
       "gutter": 20,
       "navPosition": "bottom",
-      "controlsContainer": ".promotions .slider__controls",
-      'navContainer': ".promotions .slider__nav",
+      "controlsContainer": ".promotions__slider-controls",
+      'navContainer': ".promotions__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.reviews__slider-wrapper',
+      "items": 1,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".reviews__slider-controls",
+      'navContainer': ".reviews__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.licenses__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".licenses__slider-controls",
+      'navContainer': ".licenses__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.aboutClinic__slider-wrapper',
+      "items": 2,
+      "speed": 400,
+      "gutter": 20,
+      "navPosition": "top",
+      "controlsContainer": ".aboutClinic__slider-controls",
+      'navContainer': ".aboutClinic__slider-nav",
       "navAsThumbnails": true
     });
   } else if (container.clientWidth < 540) {
     (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-      "container": '.promotions .slider__wrapper',
+      "container": '.promotions__slider-wrapper',
       "items": 1,
       "speed": 400,
-      "gutter": 20,
       "navPosition": "bottom",
-      "controlsContainer": ".promotions .slider__controls",
-      'navContainer': ".promotions .slider__nav",
+      "controlsContainer": ".promotions__slider-controls",
+      'navContainer': ".promotions__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.reviews__slider-wrapper',
+      "items": 1,
+      "speed": 400,
+      "navPosition": "top",
+      "controlsContainer": ".reviews__slider-controls",
+      'navContainer': ".reviews__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.licenses__slider-wrapper',
+      "items": 1,
+      "speed": 400,
+      "navPosition": "top",
+      "controlsContainer": ".licenses__slider-controls",
+      'navContainer': ".licenses__slider-nav",
+      "navAsThumbnails": true
+    });
+    (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+      "container": '.aboutClinic__slider-wrapper',
+      "items": 1,
+      "speed": 400,
+      "navPosition": "top",
+      "controlsContainer": ".aboutClinic__slider-controls",
+      'navContainer': ".aboutClinic__slider-nav",
       "navAsThumbnails": true
     });
   }
+  (0,tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    "container": '.doctors__slider-wrapper',
+    "items": 1,
+    "speed": 400,
+    "controlsContainer": ".doctors__slider-controls",
+    'navContainer': ".doctors__slider-nav",
+    "navAsThumbnails": true
+  });
 };
 /* harmony default export */ __webpack_exports__["default"] = (sliders);
 
@@ -8735,19 +8884,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  // cards();
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions .slider__slide', '.promotions .slider__nav', 'slider__nav-dot');
-  // countDots('.reviews .slider__slide', '.reviews .slider__nav', 'slider__nav_dot');
-  // countDots('.licenses .slider__slide', '.licenses .slider__nav', 'slider__nav_dot');
-  // countDots('.aboutClinic .slider__slide', '.aboutClinic .slider__nav', 'slider__nav_dot');
+  (0,_modules_cards__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.promotions__slide', '.promotions__slider-nav', 'promotions__nav-dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.reviews__slide', '.reviews__slider-nav', 'reviews__nav-dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.licenses__slide', '.licenses__slider-nav', 'licenses__nav-dot');
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__.countDots)('.aboutClinic__slide', '.aboutClinic__slider-nav', 'aboutClinic__nav-dot');
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  // showSlideToWindow('.aboutClinic .slider__wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
-  // modals('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
-  // modals('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
-  // forms(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
-  // helper();
-  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_modules_showSlideToWindow__WEBPACK_IMPORTED_MODULE_2__["default"])('.aboutClinic__slider-wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
+  (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
+  (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
+  (0,_modules_helper__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_6__.headerMenu)();
+  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_6__.footerMenu)();
 });
 }();
 /******/ })()

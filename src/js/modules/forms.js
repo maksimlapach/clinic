@@ -25,8 +25,11 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
     const maskOptions = {
         mask: '+{38}(000)000-00-00'
       };
+
+    const masks = [];  
     phone.forEach(item => {
-        IMask(item, maskOptions);
+        const mask = IMask(item, maskOptions);
+        masks.push(mask);
     })
     
     forms.forEach(item => {
@@ -42,6 +45,9 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
             if(obj.phone.length < 17) {
                 showResultModal(message.wrong, modal, modalResult, contentResultModal, wrapper);
                 form.reset();
+                masks.forEach(item => {
+                    item.updateValue();
+                });
                 throw new Error();
             } else {
                 json = JSON.stringify(obj);
@@ -55,6 +61,9 @@ function forms(formSelector, modalSelector, modalResultSelector, modalResultCont
             })
             .finally(() => {
                 form.reset();
+                masks.forEach(item => {
+                    item.updateValue();
+                });
             })
         });
     }

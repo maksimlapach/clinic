@@ -1,25 +1,38 @@
 .footer {
-    height: 143px;
+    height: 150px;
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 24px;
+        height: 150px;
     }
     &__menu {
+        width: 757px;
+    }
+    &__menu-list {
         display: flex;
         flex-direction: row;
-        width: 757px;
+        width: 100%;
         list-style-type: none;
         justify-content: space-between;
         padding-inline-start: 0px;
         margin-bottom: 0px;
-        &_item {
-            font-size: 18px;    
-            font-weight: 500;
-            a {
-                color: $colorText_2;
-            }
+    }
+    &__list-item {
+        font-size: 18px;    
+        font-weight: 500;
+    }
+    &__list-link {
+        color: $colorText_2;
+        &:hover {
+            color: $colorText_2;
+            text-decoration: none;
         }
+    }
+    &__hamburger {
+        display: none;
+    }
+    &__menu-close {
+        display: none;
     }
 }

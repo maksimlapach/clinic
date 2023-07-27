@@ -3,7 +3,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2, 630px);
-        grid-template-rows: 550px 859px;
+        grid-template-rows: minmax(550px, auto) minmax(859px, auto);
         gap: 30px;
         padding-top: 60px;
         background: $colorBg_2;
@@ -16,30 +16,27 @@
             color: $colorText_1;
         }
     }
-    .priceBtn {
-        width: 190px;
-        margin-top: 30px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 25px;
-    }
     &__list {
         font-weight: 500;
         font-size: 22px;
         line-height: 31px;
         padding-inline-start: 30px;
+        padding-inline-end: 10px;
+        margin-bottom: 0px;
         li {
             margin-bottom: 15px;
         }
     }
     &__item {
-        &:nth-child(1), &:nth-child(3) {
+        &:nth-child(1) {
             padding-left: 80px;
         }
-        &:nth-child(2), &:nth-child(3) {
+        &:nth-child(2) {
             padding-right: 80px;
         }
         &:nth-child(3) {
+            padding-left: 80px;
+            padding-right: 80px;
             grid-column-start: 1;
             grid-column-end: 3;
             background: url("../img/hygiene_bg.jpg") no-repeat 50% 0%;
@@ -48,14 +45,14 @@
     &__blocks {
         display: flex;
         flex-direction: column;
-        height: 570px;
+        min-height: 570px;
         justify-content: space-between;
         margin-top: 60px;
     }
     &__block {
         position: relative;
         width: 770px;
-        height: 120px;
+        min-height: 120px;
         padding: 18px 27px 18px 150px;
         background: $colorBg_1;
         border-radius: 20px;
@@ -105,27 +102,43 @@
             }
         }
     }
-    .contacts {
-        margin-top: 60px;       
+    &__messengers {
+        margin: 60px auto 0 auto;       
+    }
+    &__priceBtn {
+        width: 190px;
+        height: 40px;
+        margin-top: 30px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    &__signUpBtn {
+        width: 190px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        margin-right: 30px;
+    }
+    &__chooseDoctorBtn {
+        width: 190px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        display: inline-block;
+        padding-top: 9px;
+        color: #FFF;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
     }
     &__btns {
         margin-top: 28px;
         text-align: center;
-        .signUpBtn, .chooseDoctorBtn {
-            width: 190px;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 25px;
-        }
-        .signUpBtn {
-            margin-right: 30px;
-        }
-        .chooseDoctorBtn {
-            display: inline-block;
-            padding-top: 9px;
-            color: #FFF;
-            text-decoration: none;
-            cursor: pointer;
-        }
     }
 }

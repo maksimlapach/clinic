@@ -12,10 +12,17 @@
     }
     &__wrapper {
         display: flex;
-        justify-content: space-between;
+        column-gap: 30px;
+        flex-wrap: wrap;
         margin-top: 45px;
     }
     &__item {
+        width: 190px;
+        height: 168px;
+        cursor: pointer;
+        
+    }
+    &__item-rectangle {
         padding-top: 10px;
         width: 190px;
         height: 130px;
@@ -23,31 +30,30 @@
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
         border-radius: 20px;
         text-align: center;
-        cursor: pointer;
         &:hover {
             background: $colorBg_1;
         }
-        &:hover > &_circle {
+        &:hover > .helper__item-circle {
             background: $colorBg_2;
         }
-        &_title {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 34px;
-            color: $colorText_2;
-        }
-        &_circle {
-            width: 124px;
-            height: 124px;
-            margin-left: 33px;
-            padding-top: 25px;
-            border-radius: 100%;
-            background: $colorBg_1;
-            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
-            img {
-                width: 73px;
-                height: 103px;
-            }
-        }
+    }
+    &__item-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        color: $colorText_2;
+    }
+    &__item-circle {
+        width: 124px;
+        height: 124px;
+        margin-left: 33px;
+        padding-top: 25px;
+        border-radius: 100%;
+        background: $colorBg_1;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    }
+    &__item-img {
+        width: 73px;
+        height: 103px;
     }
 }

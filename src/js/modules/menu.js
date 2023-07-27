@@ -1,4 +1,4 @@
-function menu() {
+function headerMenu() {
     const showBtn = document.querySelector(".header__hamburger"),
           closeBtn = document.querySelector(".header__menu-close"),
           menu = document.querySelector(".header__menu"),
@@ -32,4 +32,23 @@ function menu() {
     });
 }
 
-export default menu;
+function footerMenu() {
+    const showBtn = document.querySelector(".footer__hamburger"),
+          closeBtn = document.querySelector(".footer__menu-close"),
+          menu = document.querySelector(".footer__menu");
+    
+    showBtn.addEventListener('click', () => {
+        menu.classList.add("footer__menu_active");
+    })
+    closeBtn.addEventListener('click', () => {
+        menu.classList.remove("footer__menu_active");
+    })
+    document.addEventListener('keydown', (e) => {
+        if(e.key == 'Escape') {
+            menu.classList.remove("footer__menu_active");
+        }
+    });
+}
+
+export {headerMenu};
+export {footerMenu};

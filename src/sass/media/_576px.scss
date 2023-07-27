@@ -69,17 +69,225 @@
             margin-top: 30px;
             width: 500px;
         }
-        .slider {
-            &__slide-img {
-                width: 260px;
-                height: 260px;
+        &__slide-img {
+            width: 260px;
+            height: 260px;
+        }
+        &__control-prevBtn {
+            top: 110px;
+        }
+        &__control-nextBtn {
+            top: 110px;
+        }
+    }
+    .service {
+        padding-top: 60px;
+        &__subtitle {
+            width: 500px;
+        }
+        &__wrapper {
+            grid-template-columns: 540px;
+            grid-template-rows: minmax(540px, auto);
+            grid-auto-rows: minmax(540px, auto);
+        }
+        &__item-img {
+            width: 130px;
+            height: 230px;
+            top: 20px;
+            right: 10px;
+        }
+        &__item-title {
+            font-size: 25px;
+            line-height: 29px;
+        }
+    }
+    .hygiene {
+        &__wrapper {
+            grid-template-columns: 540px;
+            grid-template-rows: minmax(131px,auto) minmax(500px,auto) minmax(680px,auto);
+            gap: 30px;
+        }
+        &__title {
+            width: 500px;
+        }
+        &__item {
+            &:nth-child(2) {
+                width: 540px;
             }
-            &__controls-prevBtn {
-                top: 110px;
+        }
+        &__blocks {
+            margin-top: 30px;
+            min-height: 556px;
+        }
+        &__block {
+            width: 500px;
+        }
+    }
+    .doctors {
+        padding-top: 60px;
+        min-height: 1080px;
+        &__subtitle {
+            width: 500px;
+        }
+        &__slider-nav {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 756px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline-start: 0px;
+            padding-top: 0px;
+        }
+        &__nav-name {
+            display: none;
+        }
+        &__nav-speciality {
+            display: none;
+        }
+        &__nav-item {
+            width: 18px;
+            height: 18px;
+            background: #BDF8F9;
+            border-radius: 100%;
+            margin-right: 20px;
+            padding: 0px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            &:last-child {
+                margin-right: 0px;
             }
-            &__controls-nextBtn {
-                top: 110px;
-            }
+        }
+        &__control-prevBtn {
+            right: 450px;
+        }
+        &__control-nextBtn {
+            right: 50px;
+        }
+        &__slider-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 810px;
+        }
+        .tns-ovh {
+            margin-left: 93px;
+        }
+        .tns-nav-active {
+            background: $colorText_3;
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            border-radius: 100%;
+        }
+    }
+    .helper {
+        &__subtitle {
+            font-size: 25px;
+            line-height: 30px;
+        }
+        &__wrapper {
+            width: 410px;
+        }
+    }
+    .modalHelper {
+        &__title {
+            font-size: 26px;
+            line-height: 33px;
+        }
+        &__subtitle {
+            width: 100%;
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &__content {
+            width: 540px;
+        }
+        &__wrapper {
+            grid-template-columns: 354px;
+        }
+    }
+
+    .reviews {
+        min-height: 630px;
+        padding-top: 60px;
+        &__subtitle {
+            width: 500px;
+        }
+        &__slider {
+            padding: 0;
+            margin-top: 30px;
+        }
+        &__slide {
+            width: 540px;
+            grid-template-columns: 160px 289px;
+        }
+        &__control-prevBtn {
+            top: 155px;
+            left: -20px;
+        }
+        &__control-nextBtn {
+            top: 155px;
+            right: -20px;
+        }
+        .tns-ovh {
+            min-height: 370px;
+        }
+    }
+
+    .licenses {
+        padding-top: 60px;
+        min-height: 640px;
+        &__subtitle {
+            width: 500px;
+        }
+        &__slider {
+            margin-top: 30px;
+        }
+        &__slide-img {
+            width: 260px;
+            height: 360px;
+        }
+        &__control-prevBtn {
+            top: 140px;
+        }
+        &__control-nextBtn {
+            top: 140px;
+        } 
+    }
+
+    .aboutClinic {
+        padding-top: 60px;
+        min-height: 1164px;
+        &__subtitle {
+            width: 500px;
+        }
+        &__wrapper {
+            margin-top: 30px;
+            grid-template-columns: 354px;
+            grid-template-rows: repeat(2, minmax(310px, auto));
+            justify-content: center;
+            row-gap: 30px;
+        }
+        &__slide-img {
+            width: 260px;
+            height: 200px;
+        }
+        &__control-prevBtn {
+            top: 80px;
+        }
+        &__control-nextBtn {
+            top: 80px;
+        }
+    }
+    .footer {
+        &__menu {
+            width: 470px;
+        }
+        &__menu-list {
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 20px;
+            justify-content: center;
         }
     }
 }

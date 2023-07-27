@@ -36,20 +36,21 @@ function helper() {
             this.subtitleParent.innerHTML = `Выберите врача который вам подходит и кликните на его фото:`;
             const item = document.createElement('div');
             item.classList.add('modalHelper__item');
+            item.classList.add('doctorCard');
             item.id = this.id;
             item.innerHTML = `
-            <div class="modalHelper__item_name">${this.name}</div>
-            <div class="modalHelper__item_speciality">${this.speciality}</div>
-            <div class="modalHelper__item_descr">
-                <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
-                <div class="modalHelper__item_certificates">
+            <div class="doctorCard__name">${this.name}</div>
+            <div class="doctorCard__speciality">${this.speciality}</div>
+            <div class="doctorCard__descr">
+                <div class="doctorCard__experience">Опыт работы более ${this.experience} лет</div>
+                <div class="doctorCard__certificates">
                     <span>Действующие сертификаты:</span> ${this.certificates}
                 </div>
-                <div class="modalHelper__item_orientation">
+                <div class="doctorCard__orientation">
                     <span>Направленость:</span> <br> ${this.orientation}
                 </div>
             </div>
-            <img src=${this.src} alt=${this.alt}>`;
+            <img class="doctorCard__img" src=${this.src} alt=${this.alt}>`;
             this.parent.append(item);
         }
 
@@ -59,40 +60,43 @@ function helper() {
             this.subtitleParent.innerHTML = '';
             const item = document.createElement('div');
             item.classList.add('modalHelper__item');
+            item.classList.add('doctorCard');
             item.id = this.id;
             item.innerHTML = `
-                <div class="modalHelper__item_name">${this.name}</div>
-                <div class="modalHelper__item_speciality">${this.speciality}</div>
-                <div class="modalHelper__item_descr">
-                    <div class="modalHelper__item_experience">Опыт работы более ${this.experience} лет</div>
-                    <div class="modalHelper__item_certificates">
+                <div class="doctorCard__name">${this.name}</div>
+                <div class="doctorCard__speciality">${this.speciality}</div>
+                <div class="doctorCard__descr">
+                    <div class="doctorCard__experience">Опыт работы более ${this.experience} лет</div>
+                    <div class="doctorCard__certificates">
                         <span>Действующие сертификаты:</span> ${this.certificates}
                     </div>
-                    <div class="modalHelper__item_orientation">
+                    <div class="doctorCard__orientation">
                         <span>Направленость:</span> <br> ${this.orientation}
                     </div>
                 </div>
-                <img src=${this.src} alt=${this.alt}>`;
+                <img class="doctorCard__img" src=${this.src} alt=${this.alt}>`;
             this.parent.append(item);
 
             const signUp = document.createElement('div');
             signUp.classList.add('modalHelper__signUp');
             signUp.innerHTML = `
-                <div class="modalHelper__signUp_title">Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br>
+                <div class="modalHelper__signUp-title">Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br>
                 <span>${this.name}</span></div>
-                <div class="messengers">
+                <div class="modalHelper__signUp-messengers messengers">
                     <div class="messengersIcons">
-                        <img src="icons/telegram.svg" alt="telegram">
-                        <img src="icons/whatsApp.svg" alt="whatsApp">
+                        <img class="messengersIcons__img" src="icons/telegram.svg" alt="telegram">
+                        <img class="messengersIcons__img" src="icons/whatsApp.svg" alt="whatsApp">
                     </div>
-                    <div class="messengers__text">спросить в мессенджере</div>
+                    <div>спросить в мессенджере</div>
                 </div>
-                <form action="#" class="signUpForm">
-                    <div class="signUpForm__title">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
-                    <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
-                    <input class="signUpForm__phone" placeholder="Телефон" type="phone" name="phone" required>
-                    <button class="signUpForm__btn btn btn_color">Записаться</button>
-                </form>
+                <div class="modalHelper__signUp-wrapper">
+                    <div class="modalHelper__signUp-subtitle">В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет</div>
+                    <form action="#" class="modalHelper__signUp-form signUpForm">  
+                        <input class="signUpForm__name" placeholder="Имя" type="text" name="name" required>
+                        <input class="signUpForm__phone" placeholder="Телефон" type="phone" name="phone" required>
+                        <button class="signUpForm__btn btn btn_color">Записаться</button>
+                    </form>
+                </div>
             `;
             this.parent.append(signUp);
         }
@@ -158,35 +162,35 @@ function helper() {
             })
             .catch(() => {
                 modalWrapper.innerHTML = `
-                <div class="modalHelper__item">
-                    <div class="modalHelper__item_name">Анисимов Дмитрий Владимирович</div>
-                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
-                    <div class="modalHelper__item_descr">
-                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
-                        <div class="modalHelper__item_certificates">
+                <div class="modalHelper__item doctorCard">
+                    <div class="doctorCard__name">Анисимов Дмитрий Владимирович</div>
+                    <div class="doctorCard__speciality">Врач-стоматолог</div>
+                    <div class="doctorCard__descr">
+                        <div class="doctorCard__experience">Опыт работы более 5 лет</div>
+                        <div class="doctorCard__certificates">
                             <span>Действующие сертификаты:</span> стоматология общей практики; стоматология хирургическая
                         </div>
-                        <div class="modalHelper__item_orientation">
+                        <div class="doctorCard__orientation">
                             <span>Направленность:</span> <br> имплантация, пародонтология, удаление зубов любой сложности
                         </div>
                     </div>
-                    <img src="img/doctors/doctor_2.png" alt="doctor_2">
+                    <img class="doctorCard__img" src="img/doctors/doctor_2.png" alt="doctor_2">
                 </div>
 
-                <div class="modalHelper__item">
-                    <div class="modalHelper__item_name">Синельщикова Елена Дмитриевна</div>
-                    <div class="modalHelper__item_speciality">Врач-стоматолог</div>
-                    <div class="modalHelper__item_descr">
-                        <div class="modalHelper__item_experience">Опыт работы более 5 лет</div>
-                        <div class="modalHelper__item_certificates">
+                <div class="modalHelper__item doctorCard">
+                    <div class="doctorCard__name">Синельщикова Елена Дмитриевна</div>
+                    <div class="doctorCard__speciality">Врач-стоматолог</div>
+                    <div class="doctorCard__descr">
+                        <div class="doctorCard__experience">Опыт работы более 5 лет</div>
+                        <div class="doctorCard__certificates">
                             <span>Действующие сертификаты:</span> стоматология общей практики;
                             стоматология хирургическая
                         </div>
-                        <div class="modalHelper__item_orientation">
+                        <div class="doctorCard__orientation">
                             <span>Направленность:</span> <br> терапевтическое лечение, эстетическая реставрация, хирургическое удаление зубов , профессиональная гигиена и отбеливание
                         </div>
                     </div>
-                    <img src="img/doctors/doctor_6.png" alt="doctor_6">
+                    <img class="doctorCard__img" src="img/doctors/doctor_6.png" alt="doctor_6">
                 </div>
                 `;
             })

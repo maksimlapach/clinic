@@ -1,0 +1,71 @@
+.doctorCard {
+    position: relative;
+    width: 630px;
+    min-height: 690px;
+    background: #FFFFFF;
+    border: 1px solid rgba(168, 234, 255, 1);
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-left: 30px;
+    &__name {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+    }
+    &__speciality {
+        width: 222px;
+        font-weight: 700;
+        color: $colorText_2;
+        font-size: 22px;
+        line-height: 31px;
+        margin-top: 11px;
+        span {
+            font-weight: 500;
+        }
+    }
+    &__descr {
+        position: absolute;
+        left: 16px;
+        bottom: 13px;
+        background: rgba(243, 254, 254, 0.8);
+        backdrop-filter: blur(6px);
+        border-radius: 20px;
+        border: 1px solid rgba(168, 234, 255, 1);
+        width: 320px;
+        min-height: 326px;
+        padding: 16px 10px 12px 14px;
+        z-index: 10;
+    }
+    &__experience {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 36px;
+        color: $colorText_2;
+    }
+    &__certificates {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        span {
+            font-weight: 600;
+        }
+    }
+    &__orientation {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        span {
+            font-weight: 600;
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        z-index: 1;
+        width: 474px;
+        height: 620px;
+    }
+}

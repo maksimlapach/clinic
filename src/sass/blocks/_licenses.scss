@@ -1,27 +1,46 @@
 .licenses {
-    padding-top: 84px;
+    padding-top: 90px;
     min-height: 735px;
     &__subtitle {
         margin: 30px auto 0 auto;
         width: 1066px;
         text-align: center;
     }
-    .slider {
-        &__controls {
-            &_prevBtn {
-                top: 177px;
-                left: -5px;
-            }
-            &_nextBtn {
-                top: 177px;
-                right: -5px;
-            }
-        }
-        &__slide {
-            img {
-                width: 300px;
-                height: 400px;
-            }
+    &__slider {
+        position: relative;
+        margin-top: 30px;
+    }
+    &__slide-img {
+        width: 300px;
+        height: 400px;
+    }
+    &__control-prevBtn {
+        top: 177px;
+        left: -5px;
+    }
+    &__control-nextBtn {
+        top: 177px;
+        right: -5px;
+    }  
+    &__slider-nav {
+        margin-top: 30px;
+    }
+    &__nav-dot {
+        width: 18px;
+        height: 18px;
+        background: $colorBg_1;
+        border-radius: 100%;
+        margin-right: 20px;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0px;
         }
     }
+    .tns-nav-active {
+        background: $colorText_3;
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+        border-radius: 100%;
+    }     
 }

@@ -10,19 +10,41 @@
             color: $colorText_1;
         }
     }
-    .slider {
+    &__slider {
+        position: relative;
         margin-top: 29px;
-        &__controls-prevBtn {
-            top: 185px;
-            left: -50px;
+    }
+    &__slide-img {
+        width: 410px;
+        height: 410px;
+    }
+    &__control-prevBtn {
+        top: 185px;
+        left: -50px;
+    }
+    &__control-nextBtn {
+        top: 185px;
+        right: -50px;
+    }
+    &__slider-nav {
+        margin-top: 33px;
+    }
+    &__nav-dot {
+        width: 18px;
+        height: 18px;
+        background: $colorBg_1;
+        border-radius: 100%;
+        margin-right: 20px;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0px;
         }
-        &__controls-nextBtn {
-            top: 185px;
-            right: -50px;
-        }
-        &__slide-img {
-            width: 410px;
-            height: 410px;
-        }
+    }
+    .tns-nav-active {
+        background: $colorText_3;
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+        border-radius: 100%;
     }
 }

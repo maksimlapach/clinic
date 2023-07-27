@@ -1,13 +1,9 @@
 .messengers {
+    width: 310px;
     display: grid;
-    grid-template-columns: 65px 214px;
+    grid-template-columns: 65px 215px;
     column-gap: 30px;
-    justify-content: center;
-    margin-top: 10px;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    // justify-content: center;
 }
 
 .messengersIcons {
@@ -23,5 +19,14 @@
             width: 30px;
             height: 30px;
         }
+    }
+}
+
+.messengersText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    &_white {
+        color: #fff;
     }
 }

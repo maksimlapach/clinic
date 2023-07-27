@@ -1,7 +1,6 @@
 @media(max-width: 575px) {
     .container {
-        width: 100%;
-        padding: 0 20px;
+        max-width: 280px;
     }
     .mainTitle {
         font-size: 20px;
@@ -12,8 +11,8 @@
         line-height: 24px;
     }
     .subtitle {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 25px;
     }
     .logo {
         flex-direction: column;
@@ -31,12 +30,55 @@
             height: 63px;
         }
     }
+    .doctorCard {
+        width: 280px;
+        &__name {
+            font-size: 15px;
+        }
+        &__speciality {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        &__img {
+            top: 120px;
+        }
+        &__descr {
+            width: 278px;
+            font-size: 16px;
+            line-height: 23px;
+            h3 {
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+        &__experience {
+            font-size: 18px;
+            line-height: 30px;
+        }
+        &__certificates {
+            font-size: 15px;
+            line-height: 21px;
+        }
+        &__orientation {
+            font-size: 15px;
+            line-height: 21px;
+        }
+    }
+    .signUpForm {
+        &__name {
+            width: 242px;
+        }
+        &__phone {
+            width: 242px;
+        }
+        &__btn {
+            width: 242px;
+        }
+    }
+
     .header {
         &__menu {
             width: 100%;
-        }
-        &__hamburger {
-            right: 20px;
         }
     }
     .promo {
@@ -79,15 +121,306 @@
             margin-top: 20px;
             width: 100%;
         }
-        .slider {
+        &__slider {
             margin-top: 30px;
-            &__slide-img {
+        }
+        &__slide-img {
+            width: 280px;
+            height: 280px;
+        }
+        &__nav {
+            margin-top: 20px;
+        }
+    }
+    .service {
+        &__subtitle {
+            width: 100%;
+        }
+        &__wrapper {
+            grid-template-columns: 280px;
+            grid-template-rows: minmax(700px, auto);
+            grid-auto-rows: minmax(700px, auto);
+        }
+        &__item {
+            padding: 30px;
+        }
+        &__item-img {
+            width: 80px;
+            height: 100px;
+            top: 0px;
+            right: 0px;
+        }
+        &__item-title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &__item-descr {
+            width: 220px;
+            min-height: 225px;
+            margin-top: 20px;
+        }
+        &__item-list {
+            font-size: 18px;
+            line-height: 25px;
+            width: 220px;
+            min-height: 225px;
+            margin-top: 40px;
+        }
+        .messengersIcons {
+            margin: 0 auto;
+        }
+        .messengers {
+            grid-template-columns: 220px;
+            row-gap: 10px;
+            width: 220px;
+        }
+    }
+    .hygiene {
+        &__wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            grid-template-columns: 280px;
+            grid-template-rows: minmax(183px, auto) minmax(553px, auto);
+        }
+        &__item {
+            &:nth-child(2) {
                 width: 280px;
-                height: 280px;
             }
-            &__nav {
-                margin-top: 20px;
+            &:nth-child(3) {
+                display: none;
             }
+        }
+        &__title {
+            width: 209px;
+        }
+        &__list {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .doctors {
+        min-height: 1130px;
+        &__subtitle {
+            width: 280px;
+        }
+        &__control-prevBtn {
+            right: 240px;
+        }
+        &__control-nextBtn {
+            right: 0px;
+        }
+        .tns-ovh {
+            width: 280px;
+            margin-left: 0px;
+        }
+    }
+    .helper {
+        &__subtitle {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        &__wrapper {
+            width: 190px;
+        }
+    }
+
+
+    .modalHelper {
+        &__title {
+            font-size: 22px;
+            line-height: 31px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &__content {
+            width: 280px;
+        }
+        &__wrapper {
+            grid-template-columns: 280px;
+        }
+        &__btns {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        &__btn {
+            font-size: 16px;
+        }
+        &__signUp {
+            width: 280px;
+            min-height: 556px;
+        }
+        &__signUp-messengers {
+            display: none;
+        }
+    }
+    .reviews {
+        min-height: 826px;
+        &__subtitle {
+            width: 100%;
+        }
+        &__slide {
+            width: 280px;
+            min-height: 497px;
+            padding-left: 15px;
+            padding-right: 15px;
+            grid-template-columns: 250px;
+        }
+        &__photo {
+            margin: 0 auto;
+        }
+        &__descr-title {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &__descr-text {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &__descr-date {
+            font-size: 14px;
+            bottom: 10px;
+        }
+        .tns-ovh {
+            min-height: 520px;
+        }
+    }
+
+    .licenses {
+        min-height: 660px;
+        &__subtitle {
+            width: 100%;
+        }
+        &__slide-img {
+            width: 280px;
+        }
+    }
+
+    .primaryConsult {
+        &__wrapper {
+            width: 280px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    .contacts {
+        min-height: 942px;
+        &__wrapper {
+            width: 280px;
+            padding: 30px;
+        }
+        &__title {
+            font-size: 22px;
+            line-height: 26px;
+        }
+        &__address {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &__timeWork {
+            font-size: 14px;
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+        &__phone {
+            width: 160px;
+        }
+        &__phone-link {
+            font-size: 18px;    
+            font-weight: 600;
+            line-height: 25px;
+            color: #fff;
+        }
+        &__messengers {
+            display: none;
+        }
+    }
+
+    .aboutClinic {
+        min-height: 850px;
+        &__subtitle {
+            width: 100%;
+        }
+        &__wrapper {
+            grid-template-columns: 280px;
+            grid-template-rows: minmax(320px, auto);
+        }
+        &__descr {
+            font-size: 17px;
+            line-height: 24px;
+        }
+        &__img {
+            display: none;
+        }
+        &__slider {
+            margin-top: 30px;
+        }
+        &__slide-img {
+            width: 280px;
+        }
+    }
+
+    .footer {
+        height: 200px;
+        &__menu {
+            width: 280px;
+        }
+        &__wrapper {
+            height: 200px;
+        }
+    }
+
+    .modalSignUp{
+        &__content {
+            width: 280px;
+            min-height: 380px;
+            padding: 60px 10px 30px 10px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &__btn {
+            margin-top: 58px;
+            width: 100%;
+        }
+        &__messengers {
+            display: none;
+        }
+    }
+
+
+    .modalPrice {
+        &__content {
+            width: 280px;
+            height: 350px;
+        }
+        &__btn {
+            margin-top: 58px;
+            width: 100%;
+        }
+        &__messengers {
+            display: none;
+        }
+    }
+
+    .modalResult {
+        &__content {
+            width: 280px;
+            font-size: 20px;
         }
     }
 }

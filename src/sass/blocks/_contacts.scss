@@ -19,6 +19,8 @@
         text-align: left;
         line-height: 36px;
         color: #fff;
+        font-weight: 500;
+        font-size: 42px;
     }
     &__address {
         color: #fff;
@@ -38,20 +40,17 @@
         }
     }
     &__phone {
-        margin-top: 30px;
+        margin-top: 20px;
         width: 212px;
-        a {
-            font-size: 24px;    
-            font-weight: 600;
-            line-height: 39px;
-            color: #fff;
-        }
     }
-    .messengers {
-        justify-content: flex-start;
-        &__text {
-            color: #fff;
-        }
+    &__phone-link {
+        font-size: 24px;    
+        font-weight: 600;
+        line-height: 39px;
+        color: #fff;
+    }
+    &__messengers {
+        margin-top: 10px;
     }
     iframe {
         width: 100%;

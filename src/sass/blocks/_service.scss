@@ -23,34 +23,45 @@
         background: $colorBg_2;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
         border-radius: 20px;
-        &_descr {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 25px;
-            margin-top: 9px;
-            width: 366px;
-            height: 100px;
-        }
-        &_list {
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 31px;
-            padding-left: 30px;
-            margin-bottom: 0px;
-            margin-top: 35px;
-            width: 391px;
-            min-height: 191px;
-        }
-        &_img {
-            position: absolute;
-            top: 27px;
-            right: 0px;
-            width: 253px;
-            height: 385px;
-        }
     }
-    .messengers {
+    &__item-img {
+        position: absolute;
+        top: 27px;
+        right: 0px;
+        width: 253px;
+        height: 385px;
+    }
+    &__item-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        color: #099dba;
+    }
+    &__item-descr {
+        position: relative;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 9px;
+        width: 366px;
+        min-height: 100px;
+        z-index: 10;
+    }
+    &__item-list {
+        position: relative;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 31px;
+        padding-inline-start: 0px;
+        padding-left: 25px;
+        margin-bottom: 0px;
         margin-top: 35px;
+        width: 391px;
+        min-height: 191px;
+        z-index: 10;
+    }
+    &__item-messengers {
+        margin: 35px auto 0 auto;
     }
 }
 
