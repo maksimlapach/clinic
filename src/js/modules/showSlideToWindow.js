@@ -1,8 +1,6 @@
-function showSlideToWindow(sliderWrapper, slideWindow, activeSlide) {
+function showSlideToWindow(sliderWrapper, slideWindow) {
     const slider = document.querySelector(sliderWrapper),
-          window = document.querySelector(slideWindow),
-          slideActive = document.querySelector(activeSlide);
-    window.src = slideActive.src;
+          window = document.querySelector(slideWindow);
     slider.addEventListener('click', (e) => {
         if(e.target.tagName === 'IMG') {
             window.src = e.target.src;

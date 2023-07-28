@@ -32,7 +32,7 @@ function helper() {
         }
 
         renderCardsDoctors() {
-            this.titleParent.innerHTML = `<span>Можете выбрать профильного врача, специализирующегося на</span> ${this.titleName}`;
+            this.titleParent.innerHTML = `<span>Можете выбрать профильного врача, специализирующегося на <br> </span> ${this.titleName}`;
             this.subtitleParent.innerHTML = `Выберите врача который вам подходит и кликните на его фото:`;
             const item = document.createElement('div');
             item.classList.add('modalHelper__item');

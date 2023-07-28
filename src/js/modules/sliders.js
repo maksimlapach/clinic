@@ -13,7 +13,6 @@ function countDots(slideSelector, indicatorsSelector, selectorDot) {
 
 const sliders = () => {
     const container = document.querySelector(".container");
-    console.log(container.clientWidth); 
     
     if(container.clientWidth > 984) {
         tns({

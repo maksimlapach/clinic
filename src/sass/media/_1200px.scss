@@ -38,7 +38,7 @@
             grid-template-rows: minmax(400px, auto);
         }
         &__item-img {
-            height: 220px;
+            height: 255px;
         }
     }
 
@@ -141,10 +141,10 @@
     }
 
     .licenses {
-        min-height: 700px;
+        min-height: 675px;
         &__slide-img {
             width: 262px;
-            height: 362px;
+            height: 340px;
         }
         &__control-prevBtn {
             top: 161px;
@@ -155,16 +155,17 @@
     }
 
     .aboutClinic {
+        min-height: 1042px;
         &__wrapper {
             grid-template-columns: repeat(2, 555px);
         }
         &__img {
             width: 555px;
-            height: 400px;
+            height: 370px;
         }
         &__slide-img {
             width: 262px;
-            height: 200px;
+            height: 175px;
         }
     }
 }

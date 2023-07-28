@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     countDots('.aboutClinic__slide', '.aboutClinic__slider-nav', 'aboutClinic__nav-dot');
     sliders();
 
-    showSlideToWindow('.aboutClinic__slider-wrapper', '.aboutClinic__img', '.aboutClinic .tns-slide-active img');
+    showSlideToWindow('.aboutClinic__slider-wrapper', '.aboutClinic__img');
     modals('.signUpBtn', ".modalSignUp", ".modalSignUp__close", ".signUpForm");
     modals('.priceBtn', ".modalPrice", ".modalPrice__close", ".signUpForm");
     forms(".signUpForm", ".modalSignUp", ".modalResult", ".modalResult__content");
