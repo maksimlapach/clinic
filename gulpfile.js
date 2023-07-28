@@ -130,4 +130,4 @@ gulp.task("build-prod-js", () => {
                 .pipe(gulp.dest("./dist/js/"));
 });
 
-gulp.task('default', gulp.parallel("build-js", 'watch', 'server', 'styles', 'fonts', 'icons', 'html', 'images', 'db'));
+gulp.task('default', gulp.parallel("build-prod-js", 'watch', 'server', 'styles', 'fonts', 'icons', 'html', 'images', 'db'));
